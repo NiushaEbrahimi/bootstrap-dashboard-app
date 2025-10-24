@@ -1,0 +1,105 @@
+.unread-and-states{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    padding: 1vh 2vw;
+}
+.states{
+    display: grid;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.states > span{
+    margin-bottom: 2vh;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.red-colored-square{
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border: 1px solid black;
+}
+.circles-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+.unread{
+    display: grid;
+    line-height: 5vh;
+    align-items: center;
+    border-right: 1px solid black;
+}
+.unread:first-child{
+    font-size: 1rem;
+}
+.unread-number{
+    font-size: 4rem;
+    transition-duration: 500ms;
+}
+.unread-number:hover{
+    color: rgb(10, 8, 131);
+}
+.unread a{
+    padding-right: 2vw;
+    text-align: end;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+.circle{ 
+    content: "";
+    background:conic-gradient(red 0deg,red var(--rotation-angle),#ffe3e3 var(--rotation-angle), #ffe3e3 var(--rotation-angle-1));;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top:50;
+    left: 50;
+}
+.circle-1{
+    background:white; 
+    content: "";
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top:50;
+    left: 50;
+}
+
+@property --rotation-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@property --rotation-angle-1 {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 90deg;
+}
+
+@keyframes angle-loop {
+    0%{
+        --rotation-angle:0deg;
+        --rotation-angle-1:90deg;
+        
+    }
+    100%{
+        --rotation-angle:90deg;
+        --rotation-angle-1:270deg;
+    }
+}

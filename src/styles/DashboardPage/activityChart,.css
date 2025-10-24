@@ -1,0 +1,12 @@
+.activity-chart-container{
+    font-family: 'vazirmatn','Dongle';
+    font-size: 1rem;
+}
+
+.activity-chart-container > div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 4fr;
+    font-size: 0.8rem;
+}

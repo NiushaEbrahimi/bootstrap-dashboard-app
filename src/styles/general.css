@@ -1,0 +1,45 @@
+:root{
+    --primary-color: #939393;
+    --primary-color-hover: #7a7a7a;
+    --secondary-color: #d3d3d3;
+    --secondary-color-lighter: #d3d3d338;
+    --hover-bg: #e0e0e0;
+    --white-color:#ffffff;
+    --black-color:#000000;
+    --warning-color:#fc7c7c;
+}
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    /* height: 100vh; */
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    /* display: flex;
+    justify-content:center;
+    align-items: center; */
+    background-color: #f0f0f0;
+    font-family: 'Dongle','vazirmatn';
+    font-size: 1.5rem;
+}
+/* main{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+} */
+input:default, input:hover, input:active, input, button{
+    font: inherit;
+    border: none;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    font-weight: normal;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+/* TODO: search for normalizers */

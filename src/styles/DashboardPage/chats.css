@@ -1,0 +1,70 @@
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  height: 5vh;
+  border-radius: 10px;
+}
+.content-container{
+  height: 100%;
+}
+.tickets-container{
+  padding: 2vh 2vw;
+  height: 100%;
+  overflow-y: hidden;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 30px 1fr;   
+}
+.table-container{
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
+}
+table {
+  /* this is the way to add space between tr */
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+td{
+    font-size: 0.7rem;   
+    font-family: 'Vazirmatn';
+    text-align: end;
+}
+tr:not(.table-header){
+  cursor: pointer;
+} 
+tbody > a{
+  width: 100%;
+}
+.group-td{
+  border-radius: 1rem;
+  padding: 1vh 1vw;
+  text-align: center;
+} 
+.حسابداری{
+  background-color: #c7f1ff5c;
+  color: #00bfff;
+}
+.توسعه{
+  background-color: #cdffcd53;
+  color: #22ba22;
+}
+.پشتیبانی{
+   background-color: #ffc1c14c;
+   color: #ff0000;
+}
+.منابع{
+  background-color: #ffa0ff47;
+  color: purple;
+}
+.آموزش{
+  background-color: lightyellow;
+  color: rgb(154, 154, 0);
+}
