@@ -5,16 +5,17 @@ import Activities from "./Activities";
 function Dashboard() {
   return (
     <Container fluid className="vh-100 p-md-5 p-0">
-    <div className="d-md-flex flex-md-row h-100">
-        <Col xs={12} md={3} 
-          className="d-flex flex-column sidebar-sm bg-white rounded-start p-3"
+      <Row className="h-100 overflow-hidden">
+          <Col xs={12} md={3} 
+            className="d-flex flex-column sidebar-sm bg-white 
+            bg-md-dark rounded-start p-3"
           >
-          <SideBar/>
-        </Col>
-        <Col xs={12} md={9} className="bg-dark rounded-end p-0 overflow-hidden">
-          <Activities />
-        </Col>
-    </div>
+            <SideBar/>
+          </Col>
+          <Col xs={12} md={9} className="bg-dark rounded-end p-0 overflow-hidden vh-100">
+            <Activities />
+          </Col>
+      </Row>
     </Container>
   );
 }

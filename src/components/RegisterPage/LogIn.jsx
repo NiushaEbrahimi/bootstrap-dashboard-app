@@ -32,7 +32,7 @@ function LogIn({setUsername, setPassword, setEmail}) {
     }
     return(
     <Card className="p-0 p-md-1 w-100">
-        <Card.Body className="p-2 p-md-4 pb-0">
+        <Card.Body className="p-2 pb-0">
             <h3 className=" mb-0 mb-md-2">Login</h3>
             <Form 
                 onSubmit={(e)=>{
@@ -67,7 +67,7 @@ function LogIn({setUsername, setPassword, setEmail}) {
                     variant="primary"
                     type="submit"
                     disabled={disabledVar}
-                    className="cursor-pointer mt-0 mb-0 mt-md-2 mb-md-2"
+                    className="cursor-pointer mt-0 mt-md-2 mb-2"
                     onClick={handleSubmit}
                     >
                     Login

@@ -1,29 +1,36 @@
 .slideshow-container{
     background-color: lightgrey; 
     max-height:90vh;
-    min-height: 65vh;
+    min-height: 60vh;
 }
 .responsive-img-slideshow{
     max-height: 65vh;
     width: 100%;
+}
+.register-container > div{
+    max-height: 45vh;
 }
 @media only screen and (max-width: 992px){
     .responsive-img-slideshow{
         width: auto;
         max-height: 50vh;
     }
+    .signup-login-link{
+        font-size: 1rem;
+    }
 }
 @media only screen and (max-width: 768px){
-    /* .signup-login-link{
-        position: absolute;
-        top:0;
-        left: 0;
-    } */
-    .input-container{
-        max-height: 20px;
+    /* TODO: fix this don't make it none */
+    .signup-login-link{
+        display: none;
     }
-    .input-container > div{
-        
+    form > button { 
+        font-size: 1.2rem !important;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .responsive-img-slideshow{
         width: auto;
@@ -33,7 +40,7 @@
         font-size: 1rem;
     }
     .register-container{
-        max-height: 30vh;
+        max-height: 40vh;
     }
     .register-container > div{
         max-width: 50vw;

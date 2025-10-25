@@ -51,7 +51,7 @@ function App() {
             // TODO: fix this
              <Container fluid className="w-100 vh-100 overflow-hidden d-flex align-items-center justify-content-center bg-light p-md-5">
               <Row className="w-100 overflow-hidden">
-                <Col xs={12} md={4} className="mb-2 mb-md-0 d-flex justify-content-center p-2 register-container">
+                <Col xs={12} md={4} className="mb-2 mb-md-0 d-flex justify-content-center align-items-center p-2 register-container">
                   <LogIn setUsername={setUsername} setPassword={setPassword} setEmail={setEmail}/>
                 </Col>
                 <Col xs={12} md={8} className="d-flex justify-content-center p-0">

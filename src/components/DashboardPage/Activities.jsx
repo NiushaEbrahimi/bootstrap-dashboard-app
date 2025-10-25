@@ -11,7 +11,6 @@ import {Container} from 'react-bootstrap'
 function Activities({username}){
     return(
         <>
-         {/* <Container className=''> */}
             <header className="header d-flex justify-content-between bg-white p-3 bg-ms-dark text-md-white">
                 <h2>Activites</h2> 
                 <Link to={"/dashboard/profile"}>
@@ -21,13 +20,12 @@ function Activities({username}){
                     </span>
                 </Link>
             </header>
-            <div className="activities-content m-0 p-4">
+            <div className="activities-content m-0 p-2 ">
                 <div className="content-container container-1"><Calendar/></div>
                 <div className="content-container container-2"><Unread chats={chats}/></div>
                 <div className="content-container container-3"><ActivityChart/></div>
                 <div className="content-container container-4"><Chats chats={chats}/></div>
             </div>
-        {/* </Container> */}
         </>
     )
 };

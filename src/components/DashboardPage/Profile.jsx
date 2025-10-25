@@ -9,12 +9,13 @@ function Profile({username,email,setUsername}){
         <Container fluid className="vh-100 p-md-5 p-0">
             <Row className="h-100 ">
                 <Col xs={12} md={3} 
-                className="d-flex flex-column sidebar-sm bg-white rounded-start p-3"
+                className="d-flex flex-column sidebar-sm 
+                bg-white rounded-start p-3"
                 >
                     <SideBar/>
                 </Col>
                 <Col xs={12} md={9} 
-                    className="bg-secondary p-5 h-100 rounded-end">
+                    className="bg-secondary p-5 rounded-end">
                     <div className="d-flex flex-row bg-white rounded overflow-hidden">
                         <div>
                             <img src={image} />
