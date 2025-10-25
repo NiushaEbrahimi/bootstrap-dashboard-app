@@ -49,17 +49,12 @@ function App() {
         <Route path='/register'>
           <Route path="login" element={
             // TODO: fix this
-             <Container fluid className="w-100 vh-100 d-flex align-items-center justify-content-center bg-light">
-              <Row className="w-100">
-                {/* if it wawsn't a react component:
-                  <div class="col-12 col-md-6">
-                  Content
-                </div>
-                */}
-                <Col xs={12} md={6} className="mb-4 mb-md-0 d-flex justify-content-center">
+             <Container fluid className="w-100 vh-100 overflow-hidden d-flex align-items-center justify-content-center bg-light p-md-5">
+              <Row className="w-100 overflow-hidden">
+                <Col xs={12} md={4} className="mb-2 mb-md-0 d-flex justify-content-center p-2 register-container">
                   <LogIn setUsername={setUsername} setPassword={setPassword} setEmail={setEmail}/>
                 </Col>
-                <Col xs={12} md={6} className="d-flex justify-content-center">
+                <Col xs={12} md={8} className="d-flex justify-content-center p-0">
                   <Slideshow />
                 </Col>
               </Row>

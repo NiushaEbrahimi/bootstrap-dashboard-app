@@ -4,13 +4,15 @@ import Activities from "./Activities";
 
 function Dashboard() {
   return (
-    <Container fluid className="vh-100 p-0">
+    <Container fluid className="vh-100 p-md-5 p-0">
     <div className="d-md-flex flex-md-row h-100">
-        <Col xs={12} md={3} className="p-0">
-        <SideBar />
+        <Col xs={12} md={3} 
+          className="d-flex flex-column sidebar-sm bg-white rounded-start p-3"
+          >
+          <SideBar/>
         </Col>
-        <Col xs={12} md={9} className="p-3 p-md-4 overflow-auto">
-        <Activities />
+        <Col xs={12} md={9} className="bg-dark rounded-end p-0 overflow-hidden">
+          <Activities />
         </Col>
     </div>
     </Container>

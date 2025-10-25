@@ -1,108 +1,47 @@
-.item-container{
-    overflow-x: hidden;
-    min-width: 60vw;
-    height: 95vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--primary-color);
-    border-radius: 1rem;
-    padding: 3vh 5vw;
-    position: relative;
-    transition-duration: 1s;
+.slideshow-container{
+    background-color: lightgrey; 
+    max-height:90vh;
+    min-height: 65vh;
 }
-.item{
-    width: 80%;
-    min-height: 70%;
-    max-height: 70vh;
-    position: absolute;
-    left: 50;
-    top: 50;
-    border-radius: 1rem;
-    padding: 3vh 3vw;
-    background-color: var(--white-color);
-    text-align: center;
-    display: grid;
-    justify-self: center;
-    align-items: center;
-    grid-template-columns: 2fr 1fr;
-    transition-duration: 1s;    
-    transform: translate(-50% -50%);
-}
-.next{
-    left: 200;
-    transform: translateX(150%);
-}
-.img-container > img{
-    width:100%;
-    height: auto;
-    border-radius: 1rem;
-}
-.img-container{
+.responsive-img-slideshow{
+    max-height: 65vh;
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
-@media only screen and (max-width: 1220px) {
-    .item{
-        grid-template-columns: 1fr;
-        grid-template-rows: 2fr 1fr;
-    }
-    .img-container > img{
+@media only screen and (max-width: 992px){
+    .responsive-img-slideshow{
         width: auto;
-        height: 100%;
-    }
-    .img-container{
-        /* TODO: fix this */
-        width: auto;
-        height: 100%;
+        max-height: 50vh;
     }
 }
-@media only screen and (max-width: 700px) {
-    .login-page-main , .signup-page-main{
-        padding: 5vh 1vw;
-        flex-direction: column;
-        height: 100vh;
-        row-gap: 3vh;
+@media only screen and (max-width: 768px){
+    /* .signup-login-link{
+        position: absolute;
+        top:0;
+        left: 0;
+    } */
+    .input-container{
+        max-height: 20px;
     }
-    .login-container , .signup-container{
-        max-height: 40vh;
-        padding: 0px 0px;
+    .input-container > div{
+        
     }
-    .form-container{
+    .responsive-img-slideshow{
+        width: auto;
+        max-height: 30vh;
+    }
+    .description-text{
         font-size: 1rem;
-        min-height: 30vh;
     }
-    .item{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+    .register-container{
+        max-height: 30vh;
     }
-    .item-container{
-        border-radius: 0.5rem;
-        width: 90vw;
-    }
-    .img-container > img{
-        width: 100%;
-        height: auto;
-    }
-    .img-container{
-        width: 100%;
-        height: auto;
+    .register-container > div{
+        max-width: 50vw;
+        min-width: 300px;
     }
 }
-@media only screen and (max-width: 450px) {
-    .login-page-main , .signup-page-main{
-        row-gap: 1vh;
-    }
-    .item-container{
-        min-height: 60vh;
-    }
-    .item{
-        max-height: 90%;
-        grid-template-columns: 1fr ;
-        grid-template-rows: 2fr 1fr;
+@media only screen and (max-width: 1155px){
+    .description-text{
+        font-size: 1.2rem;
     }
 }

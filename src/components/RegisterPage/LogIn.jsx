@@ -31,15 +31,15 @@ function LogIn({setUsername, setPassword, setEmail}) {
         }
     }
     return(
-    <Card className="shadow p-1" style={{minWidth:"30vw"}}>
-        <Card.Body>
-            <h3 className="mb-2">Login</h3>
+    <Card className="p-0 p-md-1 w-100">
+        <Card.Body className="p-2 p-md-4 pb-0">
+            <h3 className=" mb-0 mb-md-2">Login</h3>
             <Form 
                 onSubmit={(e)=>{
                     e.preventDefault();
                     handleSubmit
                 }}>
-                <Form.Group>
+                <Form.Group className="input-container"> 
                     <Form.Floating className="p-1">
                         <Form.Control 
                             type="text"
@@ -51,7 +51,7 @@ function LogIn({setUsername, setPassword, setEmail}) {
                         <Form.Label htmlFor="username">Username: </Form.Label>
                     </Form.Floating>
                 </Form.Group>
-                <Form.Group>
+                <Form.Group className="input-container"> 
                     <Form.Floating className="p-1">
                         <Form.Control 
                         type="password"
@@ -67,14 +67,13 @@ function LogIn({setUsername, setPassword, setEmail}) {
                     variant="primary"
                     type="submit"
                     disabled={disabledVar}
-                    className="cursor-pointer mt-2 mb-2"
+                    className="cursor-pointer mt-0 mb-0 mt-md-2 mb-md-2"
                     onClick={handleSubmit}
                     >
-                        
                     Login
                 </Button>
             </Form>
-                <small>Don't have an account? 
+                <small className="signup-login-link">Don't have an account? 
                     <span 
                         // TODO: should i use link instead?
                         //  should it be even span and p

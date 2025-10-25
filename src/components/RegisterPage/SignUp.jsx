@@ -155,7 +155,7 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                         sign up
                     </Button>
                 </Form>
-                <small>
+                <small className="signup-login-link">
                     Already have an account?{" "}
                     <span
                         onClick={() => navigate("/register/login")}

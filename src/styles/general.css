@@ -13,12 +13,13 @@
     
 }
 body{
-    /* height: 100vh; */
+    height: 100vh;
+    /* width: 100vw; */
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-    /* display: flex;
-    justify-content:center;
+    display: block !important;
+    /* justify-content:center;
     align-items: center; */
     background-color: #f0f0f0;
     font-family: 'Dongle','vazirmatn';
