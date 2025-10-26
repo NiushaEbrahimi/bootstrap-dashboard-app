@@ -38,6 +38,7 @@ function Unread({chats}){
     Object.keys(statusCount).forEach(key => {
         statusCount[key].percentage = (statusCount[key].count / Object.keys(chats).length) * 100;
     });
+
     return(
         <div className="unread-and-states">
             <div className='unread'>

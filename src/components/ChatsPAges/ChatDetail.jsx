@@ -1,9 +1,8 @@
-import chats from "../../data/chats.json";
 import ChatMessages from "./ChatMessages";
 import "../../styles/ChatsPAges/ChatDetail.css";
 import { useState, useEffect } from "react";
 
-function ChatDetail({ chatID }) {
+function ChatDetail({ chatID,chats }) {
     const [status, setStatus] = useState("");
     const [chat, setChat] = useState(null);
 

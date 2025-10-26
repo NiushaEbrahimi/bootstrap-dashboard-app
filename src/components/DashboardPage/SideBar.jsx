@@ -4,17 +4,17 @@ import { Nav } from "react-bootstrap";
 function SideBar() {
   return (
     <>
-      <h2 className="d-none d-md-block h4 mb-3">Dashboard</h2>
+      <h4 className="d-none d-md-block h1 mb-3">Dashboard</h4>
       {/* TODO: had problems writing this */}
-      <Nav className="justify-content-around flex-md-column flex-row gap-3">
+      <Nav className="justify-content-around flex-md-column flex-row gap-3 p-md-3 p-0 pt-0">
         <Nav.Item>
           <NavLink
             to="/dashboard/dashboard"
             end
             className={({ isActive }) =>
               isActive
-                ? "rounded bg-secondary text-white d-block p-2 text-decoration-none"
-                : "rounded bg-light text-dark d-block p-2 text-decoration-none"
+                ? "sidebar-link-activated rounded bg-grey text-white d-block p-2 text-decoration-none"
+                : "sidebar-link rounded text-dark d-block p-2 text-decoration-none"
             }
           >
             Dashboard
@@ -25,8 +25,8 @@ function SideBar() {
             to="/dashboard/profile"
             className={({ isActive }) =>
               isActive
-                ? "rounded bg-secondary text-white d-block p-2 text-decoration-none"
-                : "rounded bg-light text-dark d-block p-2 text-decoration-none"
+                ? "sidebar-link-activated rounded bg-grey text-white d-block p-2 text-decoration-none"
+                : "sidebar-link rounded text-dark d-block p-2 text-decoration-none"
             }
           >
             Profile
@@ -37,8 +37,8 @@ function SideBar() {
             to="/dashboard/help"
             className={({ isActive }) =>
               isActive
-                ? "rounded bg-secondary text-white d-block p-2 text-decoration-none"
-                : "rounded bg-light text-dark d-block p-2 text-decoration-none"
+                ? "sidebar-link-activated rounded bg-grey text-white d-block p-2 text-decoration-none"
+                : "sidebar-link rounded text-dark d-block p-2 text-decoration-none"
             }
           >
             Help

@@ -7,14 +7,29 @@ import Dashboard from './components/DashboardPage/Dashboard'
 import ChatDetail from './components/ChatsPAges/ChatDetail'
 import Profile from "./components/DashboardPage/Profile"
 import Help from "./components/DashboardPage/Help"
-import chats from './data/chats.json'
+// import chats from './data/chats.json'
 // import "./styles/general.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function App() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [chats,setChat] = useState([])
+
+  useEffect(() => {
+      async function fetchData() {
+        try {
+          const res = await fetch("/data/chats.json");
+          const data = await res.json();
+          setChat(data)
+        } catch (e) {
+          console.log("Error fetching activities:", e);
+        }
+      }
+      fetchData();
+    }, []);
+
   // TODO: when you refresh the page, the username and password are lost
   return (
     <BrowserRouter>
@@ -27,7 +42,7 @@ function App() {
               element={
                 username === "" 
                   ? <Navigate to="/register/login" replace /> 
-                  : <Dashboard username={username} password={password}/>
+                  : <Dashboard username={username} password={password} chats={chats}/>
               }>
             </Route>
             <Route path="profile"
@@ -75,7 +90,7 @@ function App() {
         </Route>
         {chats.map((chat)=>{
             return(<Route path={`/${chat.id}`} element={
-              <ChatDetail chatID={chat.id} />
+              <ChatDetail chatID={chat.id} chats={chats} />
             }/>)
           })}
       </Routes>

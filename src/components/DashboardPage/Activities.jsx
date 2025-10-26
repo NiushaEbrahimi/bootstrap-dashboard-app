@@ -1,17 +1,14 @@
 import image from '../../assets/images/profile.jpeg'
 import Calendar from './Calendar'
 import Chats from './Chats'
-import chats from '../../data/chats.json'
 import ActivityChart from "./ActivityChart"
 import Unread from './Unread'
 import { Link } from 'react-router-dom'
-import {Container} from 'react-bootstrap'
-// import the custom css
 
-function Activities({username}){
+function Activities({username,chats}){
     return(
         <>
-            <header className="header d-flex justify-content-between bg-white p-3 bg-ms-dark text-md-white">
+            <header className="d-none d-md-flex justify-content-between p-3 bg-white">
                 <h2>Activites</h2> 
                 <Link to={"/dashboard/profile"}>
                     <span className="header-profile">
@@ -20,7 +17,7 @@ function Activities({username}){
                     </span>
                 </Link>
             </header>
-            <div className="activities-content m-0 p-2 ">
+            <div className="activities-content m-0 p-4 bg-grey ">
                 <div className="content-container container-1"><Calendar/></div>
                 <div className="content-container container-2"><Unread chats={chats}/></div>
                 <div className="content-container container-3"><ActivityChart/></div>

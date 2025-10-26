@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import jalaliday from 'jalaliday/dayjs'
 import { Container} from "react-bootstrap";
+
 dayjs.extend(jalaliday);
 
-function ActivityChart() {
+function LastActivities() {
   const [recentActivities, setRecentActivities] = useState([]);
   
   useEffect(() => {
@@ -55,4 +56,4 @@ function ActivityChart() {
   );
 }
 
-export default ActivityChart;
+export default LastActivities;
