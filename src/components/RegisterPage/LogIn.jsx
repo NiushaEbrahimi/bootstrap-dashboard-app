@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getUsers } from "../../utils/authentication";
 import { useNavigate } from "react-router-dom";
-import { Form, Button, Card } from "react-bootstrap";
+import { Form, Button, Card, Container } from "react-bootstrap";
 
 function LogIn({setUsername, setPassword, setEmail}) {
     const navigate = useNavigate();
@@ -31,9 +31,12 @@ function LogIn({setUsername, setPassword, setEmail}) {
         }
     }
     return(
-    <Card className="p-0 p-md-1 w-100">
-        <Card.Body className="p-2 pb-0">
-            <h3 className=" mb-0 mb-md-2">Login</h3>
+    <Card className="p-0 p-md-1 w-100 h-100 d-flex flex-column justify-content-center 
+        // fix this: 
+        // align-items-center
+        ">
+        <Card.Body className="p-2 pb-0 h-100 d-flex flex-column justify-content-center">
+            <h3 className=" mb-0 mb-md-2 text-center">Login</h3>
             <Form 
                 onSubmit={(e)=>{
                     e.preventDefault();
@@ -63,6 +66,7 @@ function LogIn({setUsername, setPassword, setEmail}) {
                         <Form.Label htmlFor="password">Password: </Form.Label>
                     </Form.Floating>
                 </Form.Group>
+                <Container className="d-flex justify-content-center ">
                 <Button 
                     variant="primary"
                     type="submit"
@@ -72,8 +76,9 @@ function LogIn({setUsername, setPassword, setEmail}) {
                     >
                     Login
                 </Button>
+                </Container>
             </Form>
-                <small className="signup-login-link">Don't have an account? 
+                <small className="signup-login-link text-center">Don't have an account? 
                     <span 
                         // TODO: should i use link instead?
                         //  should it be even span and p

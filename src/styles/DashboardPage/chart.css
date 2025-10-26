@@ -1,0 +1,51 @@
+.activity-chart-container > div:first-child{
+    scale: 1.2;
+}
+.activity-title{
+    font-family: 'vazirmatn';
+    font-size: 0.8rem;
+}
+.activity-date{
+    font-size: 1rem;
+}
+.chart-container{
+    display: grid;
+    grid-template-rows: 3fr 1px 1fr;
+    row-gap: 5px;
+}
+.bar-chart{
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    align-items: end;
+    grid-template-columns: repeat(4,20px);
+    column-gap: 2vw;
+    padding: 0vh 1vw;
+}
+.names{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4,20px);
+}
+.chart-title{
+    text-align: center;
+    font-family: 'vazirmatn';
+    font-size: 0.7rem;
+}
+.bar{
+    width: 100%;
+}
+/* TODO: fix these */
+.اختتام{
+    background-color: #ff00007e;
+}
+.حال{
+    background-color: #00bfff90;    
+}
+.انتظار{
+  background-color: #22ba2292;
+}
+.ایجاد{
+  background-color: #80008086;
+}

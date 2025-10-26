@@ -40,16 +40,16 @@ function LastActivities() {
 
   return (
     <div 
-      className="activity-chart-container overflow-hidden 
-      p-2 d-flex gap-2 flex-column"
+      className="activity-chart-container 
+       d-flex gap-2 flex-column"
     >
       {recentActivities.slice().reverse().map((activity) => (
         <Container
           className="rounded border p-1"
           key={activity.id}
         >
-          <p className="fs-6">{activity.title}</p>
-          <span>{calculateTime(activity.date)}</span>
+          <p className="activity-title">{activity.title}</p>
+          <p className="activity-date">{calculateTime(activity.date)}</p>
         </Container>
       ))}
     </div>

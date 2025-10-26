@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { addUser, getUsers } from "../../utils/authentication";
 import { useNavigate } from "react-router-dom";
-import {Form, Button, Card} from 'react-bootstrap'
+import {Form, Button, Card, Container} from 'react-bootstrap'
 
 function SignUp({ setUsername, setPassword, setEmail }) {
     const navigate = useNavigate();
@@ -73,23 +73,26 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                 password: formState.password,
             });
             navigate("/dashboard/dashboard");
-            } else {
+        } else {
             // TODO: shake animation
             alert("Please complete the form correctly");
         }
     };
 
     return (
-        <Card className="shadow p-1" style={{minWidth:"30vw"}}>
-            <Card.Body>
-                <h3>Sign up</h3>
+            <Card className="p-0 p-md-1 w-100 h-100 d-flex flex-column justify-content-center 
+        // fix this: 
+        // align-items-center
+        ">
+        <Card.Body className="p-2 pb-0 h-100 d-flex flex-column justify-content-center">
+            <h3 className=" mb-0 mb-md-2 text-center">SignUp</h3>
                 <Form 
                     onSubmit={(e)=>{
                         e.preventDefault();
-                        handleSubmit
+                        handleSubmit(e);
                 }}>
-                    <Form.Group className="m-2">
-                        <Form.Floating>
+                    <Form.Group className="input-container">
+                        <Form.Floating className="p-1">
                             <Form.Control
                                 type="email"
                                 id="email"
@@ -103,8 +106,8 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                         <p className="checking">❌ This email is already in use.</p>
                         )}
                     </Form.Group>
-                    <Form.Group className="m-2">
-                        <Form.Floating>
+                    <Form.Group className="input-container">
+                        <Form.Floating className="p-1">
                             <Form.Control
                                 type="text"
                                 id="username"
@@ -118,8 +121,8 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                             <p className="checking">❌ This username is already taken.</p>
                             )}
                     </Form.Group>
-                    <Form.Group className="m-2">
-                        <Form.Floating>
+                    <Form.Group className="input-container">
+                        <Form.Floating className="p-1">
                             <Form.Control
                                 type="password"
                                 id="password"
@@ -150,20 +153,25 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                             : null}
                         </Form.Floating>
                     </Form.Group>
-                    <Button type="submit" disabled={!formState.ready}
-                    className="cursor-pointer">
+                    <Container className={"d-flex justify-content-center"}>
+                    <Button 
+                        type="submit" 
+                        disabled={!formState.ready}
+                        className="cursor-pointer mt-0 mt-md-2 mb-2"
+                    >
                         sign up
                     </Button>
+                    </Container>
                 </Form>
-                <small className="signup-login-link">
-                    Already have an account?{" "}
-                    <span
-                        onClick={() => navigate("/register/login")}
-                        // TODO: text primary or link ? 
-                        className="fw-semibold link-primary"
+                <small className="signup-login-link text-center">Already have an account?{" "}
+                    <span 
+                        onClick={() => {
+                            navigate("/register/login");
+                        }}
+                        className="text-primary fw-semibold m-2"
                         style={{cursor:"pointer"}}
-                    >
-                    Login
+                        >
+                        Sign up
                     </span>
                 </small>
             </Card.Body>
