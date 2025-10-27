@@ -10,6 +10,7 @@ function Chats({ chats }) {
       <h2 className="h4 mb-2 text-center fw-bold">Tickets</h2>
       <div style={{minWidth:"100%"}}className="table-scroll rounded shadow-sm">
         <table style={{minWidth:"100%",backgroundColor:"black !important"}}  className="">
+
           <thead className="bgc-dark">
             <tr className="bgc-dark">
               <th >Title</th>
@@ -38,6 +39,7 @@ function Chats({ chats }) {
               </tr>
             ))}
           </tbody>
+          
         </table>
       </div>
     </Container>

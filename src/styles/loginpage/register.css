@@ -56,7 +56,7 @@
 .checking{
     grid-column-start: 1;
     grid-column-end: 3;
-    font-size: 1.1rem;
+    font-size: 0.8zrem;
 }
 .alert{
     display: inline-block;

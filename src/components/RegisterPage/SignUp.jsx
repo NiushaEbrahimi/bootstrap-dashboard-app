@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import {Form, Button, Card, Container} from 'react-bootstrap'
 
 function SignUp({ setUsername, setPassword, setEmail }) {
+
     const navigate = useNavigate();
     const [passwordChecking,setPasswordChecking] = useState(false)
     const [formState, setFormState] = useState({
@@ -79,12 +80,9 @@ function SignUp({ setUsername, setPassword, setEmail }) {
     };
 
     return (
-            <Card className="p-0 p-md-1 w-100 h-100 d-flex flex-column justify-content-center 
-        // fix this: 
-        // align-items-center
-        ">
-        <Card.Body className="p-2 pb-0 h-100 d-flex flex-column justify-content-center">
-            <h3 className=" mb-0 mb-md-2 text-center">SignUp</h3>
+        <Card className="p-0 p-md-1 w-100 h-100 d-flex flex-column justify-content-center ">
+            <Card.Body className="p-2 pb-0 h-100 d-flex flex-column justify-content-center">
+                <h3 className=" mb-0 mb-md-2 text-center">SignUp</h3>
                 <Form 
                     onSubmit={(e)=>{
                         e.preventDefault();
@@ -102,7 +100,10 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                             <Form.Label htmlFor="email">Email:</Form.Label>
                         </Form.Floating>
                         {formState.errors.emailUsed && (
-                        <p className="checking">❌ This email is already in use.</p>
+                        <p className="fs-5">❌ This email is already in use.</p>
+                        )}
+                        {formState.errors.invalidEmail && (
+                        <p className="fs-5">❌ This is not an email.</p>
                         )}
                     </Form.Group>
                     <Form.Group className="input-container">
@@ -117,7 +118,7 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                             <Form.Label htmlFor="username">Username:</Form.Label>
                         </Form.Floating>
                         {formState.errors.usernameUsed && (
-                            <p className="checking">❌ This username is already taken.</p>
+                            <p className="fs-5">❌ This username is already taken.</p>
                             )}
                     </Form.Group>
                     <Form.Group className="input-container">
@@ -135,18 +136,18 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                                 }}
                             />
                             <Form.Label htmlFor="password">Password:</Form.Label>
-                            {passwordChecking ? <div className="checking">
+                            {passwordChecking ? <div className="fs-5">
                                 {formState.errors.shortPassword ?
-                                <p className="checking">❌ Password must be at least 8 characters long.</p>
-                                :<p className="checking">✅  Password must be at least 8 characters long.</p>
+                                <p className="fs-5">❌ Password must be at least 8 characters long.</p>
+                                :<p className="fs-5">✅  Password must be at least 8 characters long.</p>
                                 }
                                 {formState.errors.noNumber ?
-                                <p className="checking">❌ Password must contain at least one number.</p> 
-                                :<p className="checking">✅ Password must contain at least one number.</p> 
+                                <p className="fs-5">❌ Password must contain at least one number.</p> 
+                                :<p className="fs-5">✅ Password must contain at least one number.</p> 
                                 }
                                 {formState.errors.upperCase ?
-                                <p className="checking">❌ Password must contain at least one UpperCase Letter.</p>
-                                :<p className="checking">✅ Password must contain at least one UpperCase Letter.</p>
+                                <p className="fs-5">❌ Password must contain at least one UpperCase Letter.</p>
+                                :<p className="fs-5">✅ Password must contain at least one UpperCase Letter.</p>
                                 }
                                 </div>
                             : null}
