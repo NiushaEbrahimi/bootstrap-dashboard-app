@@ -3,14 +3,14 @@ import jalaliday from 'jalaliday/dayjs'
 import { useState } from 'react'
 import '../../styles/DashboardPage/calendar.css'
 
-function Calendar(){
+function Calendar({isDarkMode}){
     dayjs.extend(jalaliday)
     const today = dayjs();
     const [currentDate , setCurrentDate] = useState(dayjs())
     const weekDays = ['Saturday','Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
     let stop = true;
     return(
-        <div className="calendar-container">
+        <div className={`calendar-container ${isDarkMode ? 'text-white' : 'text-dark'}`}>
             <header>
                 <div className='Year'>
                     <p>{currentDate.calendar("jalali").format("YYYY")}</p>

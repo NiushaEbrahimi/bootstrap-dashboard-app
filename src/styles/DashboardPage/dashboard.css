@@ -6,7 +6,7 @@ body{
     display: flex;
     justify-content:center;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: var(--color-white);
     font-family: 'Dongle';
     font-size: 1.5rem;
 }
@@ -19,11 +19,10 @@ body{
     gap: 1vw;
     padding: 1vh 1vw;
     cursor: pointer;
-    color: var(--black-color);
 }
 .header-profile:hover{
     transition-duration: 500ms;
-    background-color: var(--secondary-color-lighter);
+    background-color: var(--color-3);
     border-radius: 1rem;
 }
 .header-profile > img{
@@ -33,6 +32,7 @@ body{
     object-fit: cover;
 }
 .header-profile > p {
+    color: var(--text-color) !important;
     text-decoration: none;
     font-size: 1.2rem;
 }
@@ -46,10 +46,8 @@ body{
     gap: 2vh 1vw;
 }
 .content-container{
-    /* margin-top: 5vh; */
     width: 100%;
     height: 100%;
-    background-color: white;
     border-radius: 1rem;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
@@ -69,27 +67,66 @@ body{
     grid-row-start: 2;
     grid-row-end: 7;
 }
+.sidebar-link-activated{
+    background-color: var(--color-1);
+}
 .sidebar-link-activated:hover{
-    background-color: rgb(100, 100, 100);
+    background-color: var(--color-3);
 }
 .sidebar-link, .sidebar-link-activated{
     transition-duration: 500ms;
 }
 .sidebar-link:hover{
-    background-color: #f0f0f0;
-}
-.bg-grey{
-    background-color: grey;
+    background-color: var(--color-3);
 }
 .all-dashboard-pages-container{
     padding: 5vh 10vw;
+}
+.accordion-item ,.accordion-item > h2, .accordion-item > h2 > button{
+    background-color: var(--color-6);
+}
+.accordion-button:not(.collapsed){
+    background-color: var(--color-7) !important;
+    color: black;
+}
+.accordion-button:focus{
+    box-shadow: none !important;
+}
+
+:root {
+    --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%233f3244'/%3e%3c/svg%3e");
+}
+.form-check-input:checked {
+    background-color: var(--color-1);
+    border-color: var(--color-1);
+}
+.form-check-input {
+    background-color: var(--color-2); 
+}
+body.dark-mode .form-check-input {
+    background-color: var(--color-3); 
+    border-color: var(--color-3);
+}
+body.dark-mode .form-check-input:checked {
+    background-color: var(--color-1) !important; 
+    border-color: var(--color-1) !important;
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(119, 151, 119, 0.25);
+    --bs-form-switch-bg:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e") !important;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 768px) {
+    .circles-container{
+        top:60%
+    }
 }
 @media only screen and (max-width: 767px) {
     .all-dashboard-pages-container{
         padding: 0;
     }    
 }
-
 @media only screen and (max-width: 510px) {
     .container-1{
         grid-row-start:auto;

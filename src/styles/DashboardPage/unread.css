@@ -26,10 +26,10 @@
     right: 0;
 }
 .red-colored-square{
-    width: 5px;
-    height: 5px;
-    background-color: red;
-    border: 1px solid black;
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-9);
+    border: 1px solid var(--color-black);
 }
 .circles-container{
     display: flex;
@@ -40,13 +40,12 @@
     top:50%;
     left: 30%;
     transform: translate(-50%, -50%);
-    
 }
 .unread{
     display: grid;
     line-height: 5vh;
     align-items: center;
-    border-right: 1px solid black;
+    border-right: 1px solid var(--color-2);
 }
 .unread:first-child{
     font-size: 1rem;
@@ -54,9 +53,10 @@
 .unread-number{
     font-size: 4rem;
     transition-duration: 500ms;
+    color: var(--color-9) !important;
 }
 .unread-number:hover{
-    color: rgb(10, 8, 131);
+    color: var(--color-1);
 }
 .unread a{
     padding-right: 2vw;
@@ -66,7 +66,7 @@
 }
 .circle{ 
     content: "";
-    background:conic-gradient(red 0deg,red var(--rotation-angle),#ffe3e3 var(--rotation-angle), #ffe3e3 var(--rotation-angle-1));;
+    background:conic-gradient(var(--color-9) 0deg,var(--color-9) var(--rotation-angle),var(--color-1) var(--rotation-angle), var(--color-1) var(--rotation-angle-1));;
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -76,7 +76,7 @@
     transform: translate(-50%, -50%);
 }
 .circle-1{
-    background:white; 
+    background-color: var(--color-4);
     content: "";
     border-radius: 50%;
     width: 70px;

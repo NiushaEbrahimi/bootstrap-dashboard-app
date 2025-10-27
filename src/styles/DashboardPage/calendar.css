@@ -4,6 +4,9 @@
     display: flex;
     flex-direction: column;
     padding: 1vh 1vw;    
+    background-color: var(--color-4);
+    color: var(--text-color);
+    border-radius: 1rem;
 }
 .calendar-container > header{
     display: grid;
@@ -24,19 +27,23 @@ header > .Month > p{
     font-size: 2.5rem;
 }
 .calendar-button{
-    background-color: var(--secondary-color-lighter);
+    background-color: var(--color-3);
     font-size: 1rem;
     padding: 1vh 1vw;
     cursor: pointer;
     border-radius: 50%;
 }
 .calendar-button:hover{
-    background-color: var(--secondary-color);
+    background-color: var(--color-4);
 }
 .weekdays{
     font-size: 0.7rem;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    column-gap: 1vw; */
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    column-gap: 1vw;
+    text-align: center;
 }
 .days-container{
     display: grid;
@@ -52,8 +59,9 @@ header > .Month > p{
     text-align: center;
     font-size: 1rem;
     border-radius: 0.2rem;
-    background-color: var(--secondary-color);
+    background-color: var(--color-3);
 }
 .active-day{
-    background-color: lightblue;
+    background-color: var(--color-1);
+    color: var(--color-4);
 }

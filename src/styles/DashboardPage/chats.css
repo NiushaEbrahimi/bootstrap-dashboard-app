@@ -29,7 +29,7 @@
 /* scrollbar-color: #9e9e9e #f1f1f1;  */
 
 .chat-row:hover {
-  background-color: #f0f4ff !important;
+  background-color: var(--color-3) !important;
   transition: 0.2s ease;
 }
 
@@ -42,24 +42,24 @@
   top: 0;
   z-index: 2;
 }
-
+/* 
 .accounting{
-  background-color: #c7f1ff5c;
-  color: #00bfff;
+  background-color: #c7f1ff5c !important;
+  color: #00bfff !important;
 }
 .development-group{
-  background-color: #cdffcd53;
-  color: #22ba22;
+  background-color: #cdffcd53 !important;
+  color: #22ba22 !important;
 }
 .user-support{
-   background-color: #ffc1c14c;
-   color: #ff0000;
+   background-color: #ffc1c14c !important;
+   color: #ff0000 !important;
 }
 .human-resources{
-  background-color: #ffa0ff47;
-  color: purple;
+  background-color: #ffa0ff47 !important;
+  color: #800080 !important;
 }
 .training-group{
-  background-color: lightyellow;
-  color: rgb(154, 154, 0);
-}
+  background-color: #ffffe0 !important;
+  color: #9a9a00 !important;
+} */

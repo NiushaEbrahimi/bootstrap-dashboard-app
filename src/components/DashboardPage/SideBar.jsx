@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 
-function SideBar() {
+function SideBar({isDarkMode}) {
+  const baseClasses = "rounded d-block p-2 text-decoration-none";
   return (
     <>
       <h4 className="d-none d-md-block h1 mb-3">Dashboard</h4>
@@ -11,9 +12,15 @@ function SideBar() {
             to="/dashboard/dashboard"
             end
             className={({ isActive }) =>
-              isActive
-                ? "sidebar-link-activated rounded bg-grey text-white d-block p-2 text-decoration-none"
-                : "sidebar-link rounded text-dark d-block p-2 text-decoration-none"
+              `${baseClasses} 
+                ${isActive 
+                  ? 'sidebar-link-activated'
+                  : 'sidebar-link'
+                }
+                ${isDarkMode
+                  ? 'text-white'
+                  : 'text-dark'
+                }`.trim()
             }
           >
             Dashboard
@@ -23,9 +30,15 @@ function SideBar() {
           <NavLink
             to="/dashboard/profile"
             className={({ isActive }) =>
-              isActive
-                ? "sidebar-link-activated rounded bg-grey text-white d-block p-2 text-decoration-none"
-                : "sidebar-link rounded text-dark d-block p-2 text-decoration-none"
+              `${baseClasses} 
+                ${isActive 
+                  ? 'sidebar-link-activated'
+                  : 'sidebar-link'
+                }
+                ${isDarkMode
+                  ? 'text-white'
+                  : 'text-dark'
+                }`.trim()
             }
           >
             Profile
@@ -35,9 +48,15 @@ function SideBar() {
           <NavLink
             to="/dashboard/help"
             className={({ isActive }) =>
-              isActive
-                ? "sidebar-link-activated rounded bg-grey text-white d-block p-2 text-decoration-none"
-                : "sidebar-link rounded text-dark d-block p-2 text-decoration-none"
+              `${baseClasses} 
+                ${isActive 
+                  ? 'sidebar-link-activated'
+                  : 'sidebar-link'
+                }
+                ${isDarkMode
+                  ? 'text-white'
+                  : 'text-dark'
+                }`.trim()
             }
           >
             Help

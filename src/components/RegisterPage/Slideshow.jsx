@@ -4,14 +4,14 @@ import image2 from "../../assets/images/image2.png";
 import image3 from "../../assets/images/image3.png";
 import "../../styles/loginpage/slideshow.css"
 import { useEffect, useState } from "react";
-import { Card, Container, Row, Col } from "react-bootstrap";
+import { Card, Container, Row, Col} from "react-bootstrap";
 
 function Slideshow() {
   const dataSlides = [
-    { image:image, title: "title", desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In culpa, natus beatae odit ratione expedita iusto voluptatem est, accusantium libero aut optio reiciendis qui aperiam cum a atque sapiente dolorem." },
-    { image: image1, title: "title1",desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In culpa, natus beatae odit ratione expedita iusto voluptatem est, accusantium libero aut optio reiciendis qui aperiam cum a atque sapiente dolorem." },
-    { image: image2, title: "title2",desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In culpa, natus beatae odit ratione expedita iusto voluptatem est, accusantium libero aut optio reiciendis qui aperiam cum a atque sapiente dolorem." },
-    { image: image3, title: "title3", desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In culpa, natus beatae odit ratione expedita iusto voluptatem est, accusantium libero aut optio reiciendis qui aperiam cum a atque sapiente dolorem." }
+    { image:image, title: "title", link:"https://www.google.com/", desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In culpa, natus beatae odit ratione expedita iusto voluptatem est, accusantium libero aut optio reiciendis qui aperiam cum a atque sapiente dolorem." },
+    { image: image1, title: "title1", link:"https://www.google.com/", desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In culpa, natus beatae odit ratione expedita iusto voluptatem est, accusantium libero aut optio reiciendis qui aperiam cum a atque sapiente dolorem." },
+    { image: image2, title: "title2", link:"https://www.google.com/", desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In culpa, natus beatae odit ratione expedita iusto voluptatem est, accusantium libero aut optio reiciendis qui aperiam cum a atque sapiente dolorem." },
+    { image: image3, title: "title3", link:"https://www.google.com/", desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In culpa, natus beatae odit ratione expedita iusto voluptatem est, accusantium libero aut optio reiciendis qui aperiam cum a atque sapiente dolorem." }
   ];
 
   const [count, setCount] = useState(0);
@@ -59,6 +59,16 @@ function Slideshow() {
             <Col md={12} lg={4} className="d-flex flex-column justify-content-center p-2 description-text">
               <h2>{dataSlides[count].title}</h2>
               <p>{dataSlides[count].desc}</p>
+              <button>
+                <a 
+                  href={dataSlides[count].link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{ textDecoration: 'none', color: 'inherit' }} 
+                >
+                  Learn More
+                </a>
+              </button>
             </Col>
           </Row>
         </Card.Body>

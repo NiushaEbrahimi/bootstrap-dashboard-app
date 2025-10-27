@@ -7,8 +7,6 @@ import Dashboard from './components/DashboardPage/Dashboard'
 import ChatDetail from './components/ChatsPAges/ChatDetail'
 import Profile from "./components/DashboardPage/Profile"
 import Help from "./components/DashboardPage/Help"
-// import chats from './data/chats.json'
-// import "./styles/general.css"
 import { useState, useEffect } from "react"
 
 function App() {
@@ -16,7 +14,18 @@ function App() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [chats,setChat] = useState([])
-
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  useEffect(() => {
+    if (!isDarkMode) {
+        document.body.classList.add('light-mode');
+    } else {
+        document.body.classList.remove('light-mode');
+    }
+    
+    return () => {
+        document.body.classList.remove('light-mode');
+    };
+    }, [isDarkMode]);
   useEffect(() => {
       async function fetchData() {
         try {
@@ -42,21 +51,21 @@ function App() {
               element={
                 username === "" 
                   ? <Navigate to="/register/login" replace /> 
-                  : <Dashboard username={username} password={password} chats={chats}/>
+                  : <Dashboard username={username} password={password} chats={chats} isDarkMode={isDarkMode}/>
               }>
             </Route>
             <Route path="profile"
               element={
                 username === "" 
                   ? <Navigate to="/register/login" replace /> 
-                  : <Profile username={username} email={email} setUsername={setUsername}/>
+                  : <Profile username={username} email={email} setUsername={setUsername} isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
               }>
             </Route>
             <Route path="help"
               element={
                 username === "" 
                   ? <Navigate to="/register/login" replace /> 
-                  : <Help username={username} password={password}/>
+                  : <Help username={username} password={password} isDarkMode={isDarkMode}/>
               }>
             </Route>
         </Route>

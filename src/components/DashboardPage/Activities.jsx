@@ -12,7 +12,7 @@ const STATUSES = {
   "اختتام یافته": "closed"
 };
 
-function Activities({ username, chats }) {
+function Activities({ username, chats, isDarkMode }) {
   const initialStatusCount = Object.fromEntries(
     Object.entries(STATUSES).map(([status, cssClass]) => [
       status,
@@ -46,20 +46,20 @@ function Activities({ username, chats }) {
 
   return (
     <>
-      <header className="d-none d-md-flex justify-content-between p-3 bg-white">
-        <h2>Activities</h2>
-        <Link to="/dashboard/profile">
+      <header className="d-none d-md-flex justify-content-between p-3 bgc-dark">
+        <div className='d-flex align-items-center text-center'><h2>Activities</h2></div>
+        <Link to="/dashboard/profile" style={{textDecoration:"none"}}>
           <span className="header-profile">
             <img src={image} alt="Profile" />
             <p>{username}</p>
           </span>
         </Link>
       </header>
-      <div className="activities-content m-0 p-4 bg-grey">
-        <div className="content-container container-1"><Calendar /></div>
-        <div className="content-container container-2"><Unread unreadMessages={unreadMessages} /></div>
-        <div className="content-container container-3"><ActivityChart statusCount={finalStatusCount} /></div>
-        <div className="content-container container-4"><Chats chats={chats} /></div>
+      <div className="activities-content m-0 p-4 bgc-dark">
+        <div className="content-container container-1 bgc-lighter-dark"><Calendar isDarkMode={isDarkMode} /></div>
+        <div className="content-container container-2 bgc-lighter-dark"><Unread unreadMessages={unreadMessages} /></div>
+        <div className="content-container container-3 bgc-lighter-dark"><ActivityChart statusCount={finalStatusCount} /></div>
+        <div className="content-container container-4 bgc-lighter-dark"><Chats chats={chats} /></div>
       </div>
     </>
   );

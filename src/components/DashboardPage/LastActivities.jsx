@@ -40,8 +40,9 @@ function LastActivities() {
 
   return (
     <div 
-      className="activity-chart-container 
-       d-flex gap-2 flex-column"
+      className="activity-chart-container
+      p-3 pt-1 ms-1
+      w-100 d-flex gap-2 flex-column"
     >
       {recentActivities.slice().reverse().map((activity) => (
         <Container

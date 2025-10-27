@@ -1,19 +1,19 @@
 import { Container, Row, Col} from "react-bootstrap";
-import LastActivities from "./LsatActivities"
-import Unread from "./Unread";
+import LastActivities from "./LastActivities"
 import MessageCounts from "./MessageCounts"
+
 function ActivityChart({statusCount}) { 
   return (
-    <>
-      <Row className="p-3">
-        <Col>
+    <Container fluid className="p-2 h-100 overflow-hidden">
+      <Row className="g-3 h-100 m-0">
+        <Col className="m-0 p-0 h-100">
           <MessageCounts statusCount={statusCount}/>        
         </Col>
-        <Col>
+        <Col className="m-0 p-0 h-100 w-100">
           <LastActivities/>
         </Col>
       </Row>
-    </>
+    </Container>
   );
 }
 
