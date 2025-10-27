@@ -20,7 +20,7 @@ function Calendar({isDarkMode}){
             <header>
 
                 <div className='Year'>
-                    <p>{jalaliCurrent.format("YYYY")}</p>
+                    <p >{jalaliCurrent.format("YYYY")}</p>
                 </div>
 
                 <div className='Month'>

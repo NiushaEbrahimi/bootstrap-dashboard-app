@@ -1,4 +1,4 @@
-import "../../styles/DashboardPage/dashboard.css"
+// the css in this page will be in dashboard.css
 import SideBar from "./SideBar";
 import { Container, Accordion, Col , Row } from "react-bootstrap";
 

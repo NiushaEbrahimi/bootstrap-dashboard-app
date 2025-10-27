@@ -67,6 +67,7 @@ body{
     grid-row-start: 2;
     grid-row-end: 7;
 }
+
 .sidebar-link-activated{
     background-color: var(--color-1);
 }
@@ -79,6 +80,7 @@ body{
 .sidebar-link:hover{
     background-color: var(--color-3);
 }
+
 .all-dashboard-pages-container{
     padding: 5vh 10vw;
 }
