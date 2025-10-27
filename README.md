@@ -1,16 +1,62 @@
-# React + Vite
+# [Project Name]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 Description
 
-Currently, two official plugins are available:
+This is a React application built with **Vite** and styled using **Bootstrap 5**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Technologies
 
-## React Compiler
+* **Framework:** React
+* **Build Tool:** Vite
+* **Styling:** Bootstrap 5
+* **Package Manager:** npm
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚙️ Installation and Setup
 
-## Expanding the ESLint configuration
+Follow these steps to get the project running on your local machine.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+You need to have **Node.js** (version 18+) installed on your system.
+
+### Steps
+
+1.  **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/NiushaEbrahimi/bootstrap-dashboard-app.git
+    cd bootstrap-dashboard-app
+    ```
+
+2.  **Install Dependencies:**
+
+    Run the installation command based on your package manager:
+
+    ```bash
+    npm install
+    # OR
+    # yarn install
+    # OR
+    # pnpm install
+    ```
+
+3.  **Run the Development Server:**
+
+    Start the application in development mode with Hot Module Replacement (HMR):
+
+    ```bash
+    npm run dev
+    # OR
+    # yarn dev
+    # OR
+    # pnpm dev
+    ```
+
+    The application will be available at the address shown in your terminal (usually `http://localhost:5173/`).
+
+## 📦 Production Build
+
+To build the project for production, run:
+
+```bash
+npm run build
