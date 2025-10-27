@@ -5,7 +5,6 @@ function SideBar() {
   return (
     <>
       <h4 className="d-none d-md-block h1 mb-3">Dashboard</h4>
-      {/* TODO: had problems writing this */}
       <Nav className="justify-content-around flex-md-column flex-row gap-3 p-md-3 p-0 pt-0">
         <Nav.Item>
           <NavLink

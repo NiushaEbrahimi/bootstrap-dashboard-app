@@ -5,16 +5,19 @@ import ActivityChart from './ActivityChart';
 import Unread from './Unread';
 import { Link } from 'react-router-dom';
 
-const STATUSES = [
-  "در انتظار پاسخ",
-  "در حال انجام",
-  "ایجاد شده",
-  "اختتام یافته"
-];
+const STATUSES = {
+  "در انتظار پاسخ": "waiting",
+  "در حال انجام": "in-progress",
+  "ایجاد شده": "created",
+  "اختتام یافته": "closed"
+};
 
 function Activities({ username, chats }) {
   const initialStatusCount = Object.fromEntries(
-    STATUSES.map(status => [status, { count: 0, percentage: 0 }])
+    Object.entries(STATUSES).map(([status, cssClass]) => [
+      status,
+      { count: 0, percentage: 0, css_class_name: cssClass }
+    ])
   );
 
   const { statusCount, unreadMessages } = chats.reduce(
@@ -23,7 +26,7 @@ function Activities({ username, chats }) {
         acc.unreadMessages += 1;
       }
 
-      if (STATUSES.includes(chat.status)) {
+      if (STATUSES.hasOwnProperty(chat.status)) {
         acc.statusCount[chat.status].count += 1;
       }
 
@@ -35,8 +38,9 @@ function Activities({ username, chats }) {
   const totalChats = chats.length;
   const finalStatusCount = { ...statusCount };
   if (totalChats > 0) {
-    STATUSES.forEach(status => {
-      finalStatusCount[status].percentage = (finalStatusCount[status].count / totalChats) * 100;
+    Object.keys(STATUSES).forEach(status => {
+      finalStatusCount[status].percentage =
+        (finalStatusCount[status].count / totalChats) * 100;
     });
   }
 

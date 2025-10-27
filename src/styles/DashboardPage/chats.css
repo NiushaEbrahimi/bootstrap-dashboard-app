@@ -1,70 +1,65 @@
+.table-scroll {
+  height: 45vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 0.5rem;
+}
+
+.table-scroll table {
+  margin-bottom: 0;
+}
+/* TODO: get this a margin  */
 ::-webkit-scrollbar {
-  width: 2px;
+    width: 7px; 
+    background: #f1f1f1;
 }
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
+
 ::-webkit-scrollbar-thumb {
-  background: black;
-  height: 5vh;
-  border-radius: 10px;
+    background: #9e9e9e; 
+    border-radius: 10px;
 }
-.content-container{
-  height: 100%;
-}
-.tickets-container{
-  padding: 2vh 2vw;
-  height: 100%;
-  overflow-y: hidden;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-rows: 30px 1fr;   
-}
-.table-container{
-    height: 100%;
-    overflow-y: scroll;
-    position: relative;
-}
-table {
-  /* this is the way to add space between tr */
-  border-collapse: separate;
-  border-spacing: 0 10px;
-}
-td{
-    font-size: 0.7rem;   
-    font-family: 'Vazirmatn';
-    text-align: end;
-}
-tr:not(.table-header){
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7e7e7e;
   cursor: pointer;
-} 
-tbody > a{
-  width: 100%;
 }
-.group-td{
-  border-radius: 1rem;
-  padding: 1vh 1vw;
-  text-align: center;
-} 
-.حسابداری{
+
+/* Firefox */
+/* scrollbar-width: thin;  */
+/* scrollbar-color: #9e9e9e #f1f1f1;  */
+
+.chat-row:hover {
+  background-color: #f0f4ff !important;
+  transition: 0.2s ease;
+}
+
+.group-td {
+  font-weight: 500;
+}
+
+.table-dark.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.accounting{
   background-color: #c7f1ff5c;
   color: #00bfff;
 }
-.توسعه{
+.development-group{
   background-color: #cdffcd53;
   color: #22ba22;
 }
-.پشتیبانی{
+.user-support{
    background-color: #ffc1c14c;
    color: #ff0000;
 }
-.منابع{
+.human-resources{
   background-color: #ffa0ff47;
   color: purple;
 }
-.آموزش{
+.training-group{
   background-color: lightyellow;
   color: rgb(154, 154, 0);
 }

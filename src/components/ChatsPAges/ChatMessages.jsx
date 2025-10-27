@@ -18,10 +18,9 @@ function ChatMessages({messages,status,setStatus}){
                 {newMessages.map((chat)=>{
                     return(
                         <div 
-                            // TODO: fix this and all the keys
-                            // key={id}
+                            key={chat.id}
                             className="message"
-                            // had problems writing this
+                            // TODO: had problems writing this
                             style={{ direction: chat.sender === "user" ? "rtl" : "ltr" }}
                         >
                             <div className="image-container">

@@ -60,10 +60,8 @@ function App() {
               }>
             </Route>
         </Route>
-        {/* TODO: fix this, check the console */}
         <Route path='/register'>
           <Route path="login" element={
-            // TODO: fix this
             <Container fluid className="w-100 vh-100 d-flex align-items-center justify-content-center bg-light p-5">
               <Row className="w-100 h-100">
                 <Col xs={12} md={4} className="mb-4 mb-md-0 d-flex justify-content-center align-items-center h-100">

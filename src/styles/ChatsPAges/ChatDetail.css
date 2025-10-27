@@ -60,10 +60,7 @@ main > header{
     padding: 1vh 3vw;
     position: relative;
 }
-/* TODO: get this a margin  */
-::-webkit-scrollbar {
-    width: 5px;
-}
+
 .form-message-input{
     width: 100%;
     display: flex;

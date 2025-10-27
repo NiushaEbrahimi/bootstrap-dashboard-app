@@ -36,16 +36,16 @@
 .bar{
     width: 100%;
 }
-/* TODO: fix these */
-.اختتام{
+
+.closed{
     background-color: #ff00007e;
 }
-.حال{
+.in-progress{
     background-color: #00bfff90;    
 }
-.انتظار{
+.waiting{
   background-color: #22ba2292;
 }
-.ایجاد{
+.created{
   background-color: #80008086;
 }

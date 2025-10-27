@@ -7,13 +7,10 @@ function Unread({unreadMessages}){
             <div className='unread'>
                 <p>Unread Messages:</p>
                 <Link 
-                    // TODO: Should implement this
-                    // to={} 
                     className='unread-number'>{unreadMessages}    
                 </Link>
             </div>
             <div className="states">
-                {/* TODO: fix this with the percentage */}
                 <span><span className='red-colored-square'></span>tasks remaining</span>
                 <div className='circles-container'>
                     <div className="circle" style={{animation: "angle-loop 2000ms forwards"}}></div>

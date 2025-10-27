@@ -6,13 +6,16 @@
     "section": "فنی",
     "group": "پشتیبانی کاربران",
     "status": "در انتظار پاسخ",
+    "status_css_class": "user-support",
     "messages": [
       {
+        "id":1,
         "sender": "user",
         "text": "سلام، نمی‌تونم وارد حساب کاربریم بشم.",
         "timestamp": "1403/02/10 - 14:30"
       },
       {
+        "id":2,
         "sender": "support",
         "text": "لطفاً مرورگر خود را عوض کنید و دوباره امتحان کنید.",
         "timestamp": "1403/02/10 - 15:00"
@@ -26,13 +29,16 @@
     "section": "مالی",
     "group": "حسابداری",
     "status": "در حال انجام",
+    "status_css_class": "accounting",
     "messages": [
       {
+        "id":3,
         "sender": "user",
         "text": "من فاکتورم رو آپلود کردم ولی هنوز تأیید نشده.",
         "timestamp": "1403/02/09 - 10:15"
       },
       {
+        "id":4,
         "sender": "support",
         "text": "فاکتور شما در صف بررسی است. حداکثر تا فردا پاسخ داده می‌شود.",
         "timestamp": "1403/02/09 - 11:20"
@@ -46,8 +52,10 @@
     "section": "اداری",
     "group": "منابع انسانی",
     "status": "ایجاد شده",
+    "status_css_class": "human-resources",
     "messages": [
       {
+        "id":5,
         "sender": "user",
         "text": "لطفاً دسترسی من به پنل مدیریت را فعال کنید.",
         "timestamp": "1403/02/11 - 09:00"
@@ -61,13 +69,16 @@
     "section": "فنی",
     "group": "توسعه",
     "status": "اختتام یافته",
+    "status_css_class": "development-group",
     "messages": [
       {
+        "id":5,
         "sender": "user",
         "text": "وقتی گزارش ماهانه رو انتخاب می‌کنم، صفحه سفید می‌شه.",
         "timestamp": "1403/01/25 - 16:40"
       },
       {
+        "id":6,
         "sender": "support",
         "text": "با تشکر از گزارش شما. مشکل رفع شد و در نسخه جدید اعمال گردید.",
         "timestamp": "1403/01/27 - 13:10"
@@ -81,8 +92,10 @@
     "section": "اداری",
     "group": "منابع انسانی",
     "status": "در انتظار پاسخ",
+    "status_css_class": "human-resources",
     "messages": [
       {
+        "id":7,
         "sender": "user",
         "text": "به دلیل قطعی برق، امروز ساعت ۱۰ تا ۱۲ نمی‌تونم کار کنم.",
         "timestamp": "1403/02/12 - 08:30"
@@ -96,8 +109,10 @@
     "section": "مالی",
     "group": "حسابداری",
     "status": "در انتظار پاسخ",
+    "status_css_class": "accounting",
     "messages": [
       {
+        "id":8,
         "sender": "user",
         "text": "لطفاً سقف اعتبار ماهانه من را از 50 میلیون به 80 میلیون افزایش دهید.",
         "timestamp": "1403/02/13 - 11:20"
@@ -111,18 +126,22 @@
     "section": "فنی",
     "group": "آموزش",
     "status": "اختتام یافته",
+    "status_css_class": "training-group",
     "messages": [
       {
+        "id":9,
         "sender": "user",
         "text": "آیا فیلم آموزشی برای ماژول گزارش‌گیری وجود دارد؟",
         "timestamp": "1403/01/20 - 09:15"
       },
       {
+        "id":10,
         "sender": "support",
         "text": "بله، لینک آموزش در پنل شما در بخش منابع آموزشی قرار داده شد.",
         "timestamp": "1403/01/20 - 10:30"
       },
       {
+        "id":11,
         "sender": "user",
         "text": "سپاسگزارم، دیدم و کامل بود.",
         "timestamp": "1403/01/21 - 14:00"
@@ -136,13 +155,16 @@
     "section": "فنی",
     "group": "پشتیبانی کاربران",
     "status": "در حال انجام",
+    "status_css_class": "user-support",
     "messages": [
       {
+        "id":12,
         "sender": "user",
         "text": "ایمیل تأییدیه برای تغییر رمز عبور ارسال نمی‌شود.",
         "timestamp": "1403/02/12 - 16:45"
       },
       {
+        "id":13,
         "sender": "support",
         "text": "مشکل شناسایی شد. در حال بررسی سرور ایمیل هستیم.",
         "timestamp": "1403/02/12 - 17:10"
@@ -156,13 +178,16 @@
     "section": "اداری",
     "group": "منابع انسانی",
     "status": "اختتام یافته",
+    "status_css_class": "human-resources",
     "messages": [
       {
+        "id":14,
         "sender": "user",
         "text": "گواهی پزشکی ضمیمه شد. لطفاً مرخصی 3 روزه من را تأیید کنید.",
         "timestamp": "1403/01/15 - 08:00"
       },
       {
+        "id":15,
         "sender": "support",
         "text": "مرخصی شما تأیید و در سیستم ثبت شد.",
         "timestamp": "1403/01/15 - 09:30"
@@ -176,8 +201,10 @@
     "section": "فنی",
     "group": "پشتیبانی کاربران",
     "status": "ایجاد شده",
+    "status_css_class": "user-support",
     "messages": [
       {
+        "id":16,
         "sender": "user",
         "text": "نیاز به نصب نرم‌افزار Adobe Illustrator روی سیستم دارم.",
         "timestamp": "1403/02/13 - 13:20"
