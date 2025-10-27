@@ -20,7 +20,6 @@ function ChatMessages({messages,status,setStatus}){
                         <div 
                             key={chat.id}
                             className="message"
-                            // TODO: had problems writing this
                             style={{ direction: chat.sender === "user" ? "rtl" : "ltr" }}
                         >
                             <div className="image-container">
@@ -33,8 +32,6 @@ function ChatMessages({messages,status,setStatus}){
             </div>
             <form className="form-message-input"
                 action=""
-                // TODO: had problems writing this
-                // without the line below the button won't work
                 onSubmit={(e) => {
                     e.preventDefault()
                     setNewMessages([...newMessages,{
@@ -48,7 +45,6 @@ function ChatMessages({messages,status,setStatus}){
                 }}
             >
                 <input
-                    // TODO: had problems writing this
                     disabled={status==="در انتظار پاسخ" ? false : true}
                     className="input-message-input" 
                     type="text" 
@@ -62,9 +58,6 @@ function ChatMessages({messages,status,setStatus}){
                 <button
                     className="button-message-input" 
                     type="submit"
-                    // onClick={()=>{
-                    //     newMessages = 
-                    // }}
                     disabled={status==="در انتظار پاسخ" ? false : true}
                 >send</button>
             </form>

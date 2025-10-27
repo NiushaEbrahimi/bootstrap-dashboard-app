@@ -8,9 +8,7 @@ function Chats({ chats }) {
   return (
     <Container fluid className="tickets-container mt-2" style={{ height: "50vh" }}>
       <h2 className="h4 mb-2 text-center fw-bold">Tickets</h2>
-        {/* TODO: fix the w-100 in both */}
       <div style={{minWidth:"100%"}}className="table-scroll rounded shadow-sm">
-        {/* table table-bordered table-hover table-striped align-middle text-center mb-0 */}
         <table style={{minWidth:"100%",backgroundColor:"black !important"}}  className="">
           <thead className="bgc-dark">
             <tr className="bgc-dark">

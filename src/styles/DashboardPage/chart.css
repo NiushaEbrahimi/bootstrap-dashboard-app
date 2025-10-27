@@ -52,6 +52,9 @@
 }
 .bar{
     width: 100%;
+    transition: height 0.8s ease-out; 
+    height: 0;
+    border-radius: 5px;
 }
 
 .closed{

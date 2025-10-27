@@ -31,11 +31,8 @@ function LogIn({setUsername, setPassword, setEmail}) {
         }
     }
     return(
-    <Card className="p-0 p-md-1 w-100 h-100 d-flex flex-column justify-content-center 
-        // fix this: 
-        // align-items-center
-        ">
-        <Card.Body className="p-2 pb-0 h-100 d-flex flex-column justify-content-center">
+    <Card className="p-0 p-md-1 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
+        <Card.Body className="p-2 pb-0 d-flex flex-column justify-content-center w-100">
             <h3 className=" mb-0 mb-md-2 text-center">Login</h3>
             <Form 
                 onSubmit={(e)=>{
@@ -78,10 +75,8 @@ function LogIn({setUsername, setPassword, setEmail}) {
                 </Button>
                 </Container>
             </Form>
-                <small className="signup-login-link text-center">Don't have an account? 
+                <small className="text-center">Don't have an account? 
                     <span 
-                        // TODO: should i use link instead?
-                        //  should it be even span and p
                         onClick={() => {
                             navigate("/register/signup");
                         }}

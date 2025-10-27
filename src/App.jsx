@@ -39,7 +39,6 @@ function App() {
       fetchData();
     }, []);
 
-  // TODO: when you refresh the page, the username and password are lost
   return (
     <BrowserRouter>
       <Routes>
@@ -71,9 +70,9 @@ function App() {
         </Route>
         <Route path='/register'>
           <Route path="login" element={
-            <Container fluid className="w-100 vh-100 d-flex align-items-center justify-content-center bg-light p-5">
+            <Container fluid className="w-100 vh-100 d-flex align-items-center justify-content-center bg-light p-3 p-md-5">
               <Row className="w-100 h-100">
-                <Col xs={12} md={4} className="mb-4 mb-md-0 d-flex justify-content-center align-items-center h-100">
+                <Col xs={12} md={4} className="mb-4 mb-md-0 d-flex justify-content-center align-items-center h-md-100">
                   <LogIn setUsername={setUsername} setPassword={setPassword} setEmail={setEmail}/>
                 </Col>
                 <Col xs={12} md={8} className="d-flex justify-content-center p-0">
@@ -83,9 +82,9 @@ function App() {
             </Container>
           }/>
           <Route path="signup" element={
-            <Container fluid className="w-100 vh-100 d-flex align-items-center justify-content-center bg-light p-5">
+            <Container fluid className="w-100 vh-100 d-flex align-items-center justify-content-center bg-light p-3 p-md-5">
               <Row className="w-100 h-100">
-                <Col xs={12} md={4} className="mb-4 mb-md-0 d-flex justify-content-center align-items-center h-100">
+                <Col xs={12} md={4} className="mb-4 mb-md-0 d-flex justify-content-center align-items-center h-md-100">
                   <SignUp username={username} setUsername={setUsername} password={password} setPassword={setPassword} email={email} setEmail={setEmail}/>  
                 </Col>
                 <Col xs={12} md={8} className="d-flex justify-content-center">

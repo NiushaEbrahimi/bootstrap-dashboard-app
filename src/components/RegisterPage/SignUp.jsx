@@ -74,7 +74,6 @@ function SignUp({ setUsername, setPassword, setEmail }) {
             });
             navigate("/dashboard/dashboard");
         } else {
-            // TODO: shake animation
             alert("Please complete the form correctly");
         }
     };
@@ -163,7 +162,7 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                     </Button>
                     </Container>
                 </Form>
-                <small className="signup-login-link text-center">Already have an account?{" "}
+                <small className="text-center">Already have an account?{" "}
                     <span 
                         onClick={() => {
                             navigate("/register/login");

@@ -3,8 +3,8 @@ import image1 from "../../assets/images/image1.png";
 import image2 from "../../assets/images/image2.png";
 import image3 from "../../assets/images/image3.png";
 import "../../styles/loginpage/slideshow.css"
-import { useEffect, useState } from "react";
-import { Card, Container, Row, Col} from "react-bootstrap";
+import { useEffect, useState, useCallback } from "react";
+import { Card, Container, Row, Col, Button } from "react-bootstrap"; 
 
 function Slideshow() {
   const dataSlides = [
@@ -17,28 +17,60 @@ function Slideshow() {
   const [count, setCount] = useState(0);
   const [style, setStyle] = useState("translateX(0%)");
   const [opacity, setOpacity] = useState("1");
+  const slideLength = dataSlides.length;
+
+  const transitionSlide = useCallback((newCount, direction = 'next') => {
+
+    setOpacity("0");
+    const outDirection = direction === 'next' ? '-100%' : '100%';
+    setStyle(`translateX(${outDirection})`);
+    
+    setTimeout(() => {
+      
+      setCount(newCount); 
+      const inDirection = direction === 'next' ? '100%' : '-100%';
+      setStyle(`translateX(${inDirection})`); 
+      
+    }, 500); 
+
+    setTimeout(() => {
+      setOpacity("1");
+      setStyle("translateX(0%)");
+    }, 550);
+  }, []);
+
+  const goToNext = useCallback(() => {
+    const newCount = (count + 1) % slideLength;
+    transitionSlide(newCount, 'next');
+  }, [count, slideLength, transitionSlide]);
+
+  const goToPrev = useCallback(() => {
+    const newCount = (count - 1 + slideLength) % slideLength;
+    transitionSlide(newCount, 'prev');
+  }, [count, slideLength, transitionSlide]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setOpacity("0");
-      setStyle("translateX(100%)");
-      setTimeout(() => {
-        setCount(prev => (prev + 1) % dataSlides.length);
-        setStyle("translateX(-100%)");
-      }, 500);
-      setTimeout(() => {
-        setOpacity("1");
-        setStyle("translateX(0%)");
-      }, 800);
+      goToNext();
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [goToNext]); 
 
   return (
     <Container
       className="overflow-hidden d-flex justify-content-center align-items-center rounded p-2 p-md-5 slideshow-container"
+      style={{ position: 'relative' }}
     >
+      <Button 
+        variant="secondary" 
+        onClick={goToPrev} 
+        className="slideshow-control prev-btn"
+        style={{ position: 'absolute', left: '10px', zIndex: 10, top: '50%', transform: 'translateY(-50%)' }}
+      >
+        &#9664;
+      </Button>
+
       <Card
         className="border-0"
         style={{
@@ -64,7 +96,7 @@ function Slideshow() {
                   href={dataSlides[count].link} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  style={{ textDecoration: 'none', color: 'inherit' }} 
+                  style={{ textDecoration: 'none', color: 'inherit' }}
                 >
                   Learn More
                 </a>
@@ -73,6 +105,16 @@ function Slideshow() {
           </Row>
         </Card.Body>
       </Card>
+
+      <Button 
+        variant="secondary" 
+        onClick={goToNext} 
+        className="slideshow-control next-btn"
+        style={{ position: 'absolute', right: '10px', zIndex: 10, top: '50%', transform: 'translateY(-50%)' }}
+      >
+        &#9654;
+      </Button>
+
     </Container>
   );
 }

@@ -26,7 +26,7 @@ function Activities({ username, chats, isDarkMode }) {
         acc.unreadMessages += 1;
       }
 
-      if (STATUSES.hasOwnProperty(chat.status)) {
+      if (chat.status in STATUSES) {
         acc.statusCount[chat.status].count += 1;
       }
 

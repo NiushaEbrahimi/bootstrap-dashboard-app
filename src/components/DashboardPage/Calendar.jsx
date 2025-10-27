@@ -20,7 +20,6 @@ function Calendar({isDarkMode}){
                         className="month-after  calendar-button"
                         onClick={() => setCurrentDate(d => d.add(1, 'month'))}
                     > {"<"} </span>
-                    {/* TODO: should this be persian or not */}
                     <p>{currentDate.calendar("jalali").format("MMMM")}</p>
                     <span 
                         className="month-before calendar-button"
