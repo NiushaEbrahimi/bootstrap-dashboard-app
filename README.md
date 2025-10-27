@@ -1,4 +1,4 @@
-# [Project Name]
+# Bootstrap Dashboard App
 
 ## 📝 Description
 
@@ -9,6 +9,7 @@ This is a React application built with **Vite** and styled using **Bootstrap 5**
 * **Framework:** React
 * **Build Tool:** Vite
 * **Styling:** Bootstrap 5
+* **Date/Time Management:** Day.js
 * **Package Manager:** npm
 
 ## ⚙️ Installation and Setup
@@ -34,10 +35,6 @@ You need to have **Node.js** (version 18+) installed on your system.
 
     ```bash
     npm install
-    # OR
-    # yarn install
-    # OR
-    # pnpm install
     ```
 
 3.  **Run the Development Server:**
@@ -46,17 +43,6 @@ You need to have **Node.js** (version 18+) installed on your system.
 
     ```bash
     npm run dev
-    # OR
-    # yarn dev
-    # OR
-    # pnpm dev
     ```
 
     The application will be available at the address shown in your terminal (usually `http://localhost:5173/`).
-
-## 📦 Production Build
-
-To build the project for production, run:
-
-```bash
-npm run build
