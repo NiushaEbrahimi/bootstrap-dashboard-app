@@ -82,7 +82,7 @@ function SignUp({ setUsername, setPassword, setEmail }) {
     return (
         <Card className="p-0 p-md-1 w-100 h-100 d-flex flex-column justify-content-center ">
             <Card.Body className="p-2 pb-0 h-100 d-flex flex-column justify-content-center">
-                <h3 className=" mb-0 mb-md-2 text-center">SignUp</h3>
+                <h3 className=" mb-0 mb-md-2 text-center h1">SignUp</h3>
                 <Form 
                     onSubmit={(e)=>{
                         e.preventDefault();
@@ -157,7 +157,7 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                     <Button 
                         type="submit" 
                         disabled={!formState.ready}
-                        className="cursor-pointer mt-0 mt-md-2 mb-2"
+                        className="cursor-pointer mt-0 mt-md-2 mb-2 ps-3 pe-3 pt-1 pb-1 fs-4"
                     >
                         sign up
                     </Button>

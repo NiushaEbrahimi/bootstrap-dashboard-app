@@ -1,5 +1,5 @@
 .slideshow-container{
-    background-color: lightgrey; 
+    background-color: var(--color-2); 
     max-height:90vh;
     min-height: 60vh;
 }
@@ -10,6 +10,7 @@
 .register-container > div{
     max-height: 45vh;
 }
+
 @media only screen and (max-width: 992px){
     .responsive-img-slideshow{
         width: auto;

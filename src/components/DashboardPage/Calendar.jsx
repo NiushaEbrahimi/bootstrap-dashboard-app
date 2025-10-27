@@ -3,35 +3,46 @@ import jalaliday from 'jalaliday/dayjs'
 import { useState } from 'react'
 import '../../styles/DashboardPage/calendar.css'
 
+dayjs.extend(jalaliday)
+const WEEKDAYS = ['Saturday','Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+
 function Calendar({isDarkMode}){
-    dayjs.extend(jalaliday)
+    
     const today = dayjs();
     const [currentDate , setCurrentDate] = useState(dayjs())
-    const weekDays = ['Saturday','Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+    const jalaliCurrent = currentDate.calendar('jalali');
+    const jalaliToday = today.calendar('jalali');
     let stop = true;
+
     return(
         <div className={`calendar-container ${isDarkMode ? 'text-white' : 'text-dark'}`}>
+            
             <header>
+
                 <div className='Year'>
-                    <p>{currentDate.calendar("jalali").format("YYYY")}</p>
+                    <p>{jalaliCurrent.format("YYYY")}</p>
                 </div>
+
                 <div className='Month'>
                     <span
-                        className="month-after  calendar-button"
+                        className="month-after calendar-button"
                         onClick={() => setCurrentDate(d => d.add(1, 'month'))}
                     > {"<"} </span>
-                    <p>{currentDate.calendar("jalali").format("MMMM")}</p>
+                    <p>{jalaliCurrent.format("MMMM")}</p>
                     <span 
                         className="month-before calendar-button"
                         onClick={() => setCurrentDate(d => d.subtract(1, 'month'))}
                     > {">"} </span>
                 </div>
+
             </header>
+
             <div className="weekdays">
-                {weekDays.reverse().map((day) => {return <span key={day} className={"day-name"}>{day}</span>})}
+                {WEEKDAYS.reverse().map((day) => {return <span key={day} className={"day-name"}>{day}</span>})}
             </div>
+
             <div className='days-container'>
-                {weekDays.reverse().map((day)=>{
+                {WEEKDAYS.reverse().map((day)=>{
                     if(stop){
                     if(day!==currentDate.calendar('jalali').startOf('month').format("dddd")){
                         return (<span></span>);
@@ -39,14 +50,15 @@ function Calendar({isDarkMode}){
                         stop=false;
                     }}
                 })}
-                {Array.from({ length: currentDate.calendar("jalali").daysInMonth() }, (_, i) => {
-                    currentDate.calendar("jalali").startOf('month').add(i, 'day').format('DD')}).map((dayMap, index) => {
-                        if(index+1 == today.calendar("jalali").format("DD") && currentDate.format("MMMM") === today.format("MMMM")){
-                            return <span key={index} className={"day active-day"}>{index+1}</span>    
+                {Array.from({ length: jalaliCurrent.daysInMonth() }, (_, i) => {
+                    jalaliCurrent.startOf('month').add(i, 'day').format('DD')}).map((dayMap, index) => {
+                        if(index+1 == jalaliToday.format("DD") && currentDate.format("MMMM") === today.format("MMMM")){
+                            return <span key={index} className={"day active-day text-dark"}>{index+1}</span>    
                         }
                         return <span key={index} className={"day"}>{index+1}</span>
                     })}
             </div>
+
         </div>
     )
 }

@@ -5,7 +5,7 @@
     "title": "مشکل در ورود به سیستم",
     "section": "فنی",
     "group": "پشتیبانی کاربران",
-    "status": "در انتظار پاسخ",
+    "status": "در حال انجام",
     "status_css_class": "user-support",
     "messages": [
       {
@@ -191,23 +191,6 @@
         "sender": "support",
         "text": "مرخصی شما تأیید و در سیستم ثبت شد.",
         "timestamp": "1403/01/15 - 09:30"
-      }
-    ]
-  },
-  {
-    "read": false,
-    "id": 110,
-    "title": "درخواست نصب نرم‌افزار جدید",
-    "section": "فنی",
-    "group": "پشتیبانی کاربران",
-    "status": "ایجاد شده",
-    "status_css_class": "user-support",
-    "messages": [
-      {
-        "id":16,
-        "sender": "user",
-        "text": "نیاز به نصب نرم‌افزار Adobe Illustrator روی سیستم دارم.",
-        "timestamp": "1403/02/13 - 13:20"
       }
     ]
   }

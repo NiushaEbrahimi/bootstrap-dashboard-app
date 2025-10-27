@@ -38,8 +38,6 @@ header > .Month > p{
 }
 .weekdays{
     font-size: 0.7rem;
-    /* display: flex;
-    column-gap: 1vw; */
     display: grid;
     grid-template-columns: repeat(7,1fr);
     column-gap: 1vw;

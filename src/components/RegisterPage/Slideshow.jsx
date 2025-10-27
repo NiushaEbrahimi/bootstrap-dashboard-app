@@ -65,7 +65,7 @@ function Slideshow() {
       <Button 
         variant="secondary" 
         onClick={goToPrev} 
-        className="slideshow-control prev-btn"
+        className="prev-btn"
         style={{ position: 'absolute', left: '10px', zIndex: 10, top: '50%', transform: 'translateY(-50%)' }}
       >
         &#9664;
@@ -88,10 +88,13 @@ function Slideshow() {
                 alt={dataSlides[count].title}
               />
             </Col>
-            <Col md={12} lg={4} className="d-flex flex-column justify-content-center p-2 description-text">
+            <Col md={12} lg={4} className="d-flex flex-column justify-content-center align-items-center p-2 description-text text-center">
               <h2>{dataSlides[count].title}</h2>
               <p>{dataSlides[count].desc}</p>
-              <button>
+              <button 
+                style={{backgroundColor: "var(--color-9)" , color: "var(--color-white)"}}
+                className="rounded-4 ps-3 pe-3 pt-1 pb-1"
+              >
                 <a 
                   href={dataSlides[count].link} 
                   target="_blank" 
@@ -109,7 +112,7 @@ function Slideshow() {
       <Button 
         variant="secondary" 
         onClick={goToNext} 
-        className="slideshow-control next-btn"
+        className="next-btn"
         style={{ position: 'absolute', right: '10px', zIndex: 10, top: '50%', transform: 'translateY(-50%)' }}
       >
         &#9654;

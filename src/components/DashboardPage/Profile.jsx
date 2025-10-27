@@ -4,9 +4,11 @@ import { Container , Col , Row, Card } from "react-bootstrap";
 
 
 function Profile({username,email,setUsername,isDarkMode,setIsDarkMode}){
+
     const toggleMode = () => {
         setIsDarkMode(!isDarkMode);
     };
+    
     return(
         <Container fluid className={`vh-100 all-dashboard-pages-container dashboard-container ${isDarkMode ? 'light-mode' : ''}`}>
             <Row className="h-100 overflow-hidden">

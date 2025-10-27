@@ -66,7 +66,7 @@
 }
 .circle{ 
     content: "";
-    background:conic-gradient(var(--color-9) 0deg,var(--color-9) var(--rotation-angle),var(--color-1) var(--rotation-angle), var(--color-1) var(--rotation-angle-1));;
+    background:conic-gradient(var(--color-9) 0deg,var(--color-9) var(--rotation-angle),var(--color-white) var(--rotation-angle), var(--color-white) var(--rotation-angle-1));;
     border-radius: 50%;
     width: 80px;
     height: 80px;

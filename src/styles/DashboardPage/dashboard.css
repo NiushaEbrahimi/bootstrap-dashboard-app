@@ -151,9 +151,9 @@ body.dark-mode .form-check-input:checked {
         overflow-y: scroll;
         border-radius: 0px !important;
     }
-    .dashboard-container{
+    /* .dashboard-container{
         height: auto !important;
-    }
+    } */
     .activity-container{
         height: auto !important;
     }

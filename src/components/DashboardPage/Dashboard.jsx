@@ -8,12 +8,12 @@ function Dashboard({username,chats,isDarkMode}) {
       <Row className="h-100 overflow-hidden rounded-4">
 
           <Col xs={12} md={3} 
-            className="d-flex flex-column sidebar-sm rounded-start-4 p-3 bgc-lighter-dark"
+            className="d-flex flex-column sidebar-sm rounded-start-4 p-3 bgc-lighter-dark h-md-100"
           >
             <SideBar isDarkMode={isDarkMode}/>
           </Col>
           
-          <Col xs={12} md={9} className="rounded-end-4 p-0 overflow-hidden activity-container vh-100">
+          <Col xs={12} md={9} className="rounded-end-4 p-0 activity-container d-flex flex-column h-100">
             <Activities username={username} chats={chats} isDarkMode={isDarkMode}/>
           </Col>
 

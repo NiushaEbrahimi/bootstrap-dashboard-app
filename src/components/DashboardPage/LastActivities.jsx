@@ -6,6 +6,7 @@ import { Container} from "react-bootstrap";
 dayjs.extend(jalaliday);
 
 function LastActivities() {
+  
   const [recentActivities, setRecentActivities] = useState([]);
   
   useEffect(() => {
@@ -18,7 +19,6 @@ function LastActivities() {
         console.log("Error fetching activities:", e);
       }
     };
-
     fetchData();
   }, []);
 
@@ -36,6 +36,7 @@ function LastActivities() {
     if(hourDiff<24){return(`${hourDiff} hours ago`)}
     if(dayDiff<30){return(`${dayDiff} days ago`)}
     if(monthDiff!="0" && monthDiff<12){return(`${now.diff(goalDate,"month")} month ago`)}
+
   };
 
   return (
@@ -49,8 +50,8 @@ function LastActivities() {
           className="rounded border p-1"
           key={activity.id}
         >
-          <p className="activity-title">{activity.title}</p>
-          <p className="activity-date">{calculateTime(activity.date)}</p>
+          <p className="activity-title m-0">{activity.title}</p>
+          <p className="activity-date m-0">{calculateTime(activity.date)}</p>
         </Container>
       ))}
     </div>

@@ -2,6 +2,7 @@
     scale: 1.1;
     background-color:var(--color-1);
     margin-bottom: 0.5vh;
+    color:var(--color-black)
 }
 .activity-chart-container > div:first-child:after{
     content: "";

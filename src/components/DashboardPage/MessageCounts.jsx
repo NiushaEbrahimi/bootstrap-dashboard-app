@@ -40,7 +40,7 @@ function MessageCounts({statusCount}){
                             <div 
                                 key={key}
                                 style={{ height: `${height}px` }} 
-                                className={`${data.css_class_name} bar`}
+                                className={`${data.css_class_name} bar shadow-sm`}
                             ></div>
                         )
                     })}

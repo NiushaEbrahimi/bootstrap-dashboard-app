@@ -33,7 +33,7 @@ function LogIn({setUsername, setPassword, setEmail}) {
     return(
     <Card className="p-0 p-md-1 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
         <Card.Body className="p-2 pb-0 d-flex flex-column justify-content-center w-100">
-            <h3 className=" mb-0 mb-md-2 text-center">Login</h3>
+            <h3 className=" mb-0 mb-md-2 text-center h1">Login</h3>
             <Form 
                 onSubmit={(e)=>{
                     e.preventDefault();
@@ -68,7 +68,7 @@ function LogIn({setUsername, setPassword, setEmail}) {
                     variant="primary"
                     type="submit"
                     disabled={disabledVar}
-                    className="cursor-pointer mt-0 mt-md-2 mb-2"
+                    className="cursor-pointer mt-0 mt-md-2 mb-2 ps-3 pe-3 pt-1 pb-1 fs-4"
                     onClick={handleSubmit}
                     >
                     Login

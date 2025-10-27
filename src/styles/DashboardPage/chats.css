@@ -8,7 +8,20 @@
 .table-scroll table {
   margin-bottom: 0;
 }
-/* TODO: get this a margin  */
+
+.custom-table {
+  background-color: var(--color-3);
+  color: var(--color-white);
+}
+
+.custom-table,
+.custom-table th,
+.custom-table td {
+  background-color: var(--color-3);
+  border-color: var(--color-2) !important;
+  border-width: 2px;
+  color: var(--color-white);
+}
 ::-webkit-scrollbar {
     width: 7px; 
     background: #f1f1f1;
@@ -23,11 +36,6 @@
   background: #7e7e7e;
   cursor: pointer;
 }
-
-/* Firefox */
-/* scrollbar-width: thin;  */
-/* scrollbar-color: #9e9e9e #f1f1f1;  */
-
 .chat-row:hover {
   background-color: var(--color-3) !important;
   transition: 0.2s ease;

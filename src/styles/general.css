@@ -1,21 +1,22 @@
 :root {
-  --color-1: #bfc3ba; 
-  --color-2: #a9aca9; 
-  --color-3: #654e5f; 
-  --color-4: #3f3244; 
-  --color-5: #372c3c; 
-  --color-6: #d9dcd6; 
-  --color-7: #f1f0ec; 
-  --color-8: #c8bfc7;
-  --color-9: rgb(119, 151, 119) ;
-  --color-white:#ffffff;
-  --color-black: #000000;
-  --text-color:var(--color-white)
+    --color-1: #bfc3ba; 
+    --color-2: #a9aca9; 
+    --color-3: #4e4f65; 
+    --color-4: #333244; 
+    --color-5: #2c2c3c;
+    --color-6: #d9dcd6; 
+    --color-7: #f1f0ec; 
+    --color-8: #c8bfc7;
+    --color-9: rgb(119, 151, 119) ;
+    --color-white: #ffffff;
+    --color-black:#000000;
+    --text-color:var(--color-white);
+
 }
 body.light-mode{
-    --color-3: #654e5f60; 
+    --color-3: #4e4f6557; 
     --color-4: #dbdada; 
-    --color-5: #372c3c5c; 
+    --color-5: #2c2c3c5c; 
     --text-color : var(--color-black);
 }
 .bgc-dark{
@@ -51,7 +52,6 @@ input:default, input:hover, input:active, input, button{
     font: inherit;
     border: none;
 }
-
 h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     font-weight: normal;
