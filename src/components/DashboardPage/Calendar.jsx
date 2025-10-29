@@ -28,7 +28,7 @@ function Calendar({isDarkMode}){
                         className="month-after calendar-button"
                         onClick={() => setCurrentDate(d => d.add(1, 'month'))}
                     > {"<"} </span>
-                    <p>{jalaliCurrent.format("MMMM")}</p>
+                    <p className='m-0'>{jalaliCurrent.format("MMMM")}</p>
                     <span 
                         className="month-before calendar-button"
                         onClick={() => setCurrentDate(d => d.subtract(1, 'month'))}
