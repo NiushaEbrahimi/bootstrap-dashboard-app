@@ -19,7 +19,7 @@ function Chats({ chats }) {
             </tr>
           </thead>
 
-          <tbody className="table-body-scroll">
+          <tbody className="overflow-scroll">
             {chats.map((chat) => (
               <tr
                 key={chat.id}

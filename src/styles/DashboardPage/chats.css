@@ -36,3 +36,14 @@
   top: 0;
   z-index: 2;
 }
+
+.table-scroll {
+  height: 45vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 0.5rem;
+}
+
+.table-scroll table {
+  margin-bottom: 0;
+}
