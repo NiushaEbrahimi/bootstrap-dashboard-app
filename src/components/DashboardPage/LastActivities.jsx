@@ -51,7 +51,7 @@ function LastActivities() {
           className="rounded border p-1"
           key={activity.id}
         >
-          <p className="activity-title m-0">{activity.title}</p>
+          <p className="activity-title m-0" style={{direction:"rtl"}}>{activity.title}</p>
           <p className="activity-date m-0">{calculateTime(activity.date)}</p>
         </Container>
       ))}
