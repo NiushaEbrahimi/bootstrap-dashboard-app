@@ -1,6 +1,7 @@
 import SideBar from "./SideBar";
 import { Container, Row, Col } from "react-bootstrap";
 import Activities from "./Activities";
+import "../../styles/DashboardPage/dashboard.css" 
 
 function Dashboard({username,chats,isDarkMode}) {
   return (
