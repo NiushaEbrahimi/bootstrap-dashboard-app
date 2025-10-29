@@ -52,7 +52,7 @@ function Activities({ username, chats, isDarkMode }) {
         <Link to="/dashboard/profile" style={{textDecoration:"none"}}>
           <span className="header-profile">
             <img src={image} alt="Profile" />
-            <p>{username}</p>
+            <p className='m-0'>{username}</p>
           </span>
         </Link>
       </header>
