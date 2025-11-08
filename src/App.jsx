@@ -10,11 +10,13 @@ import Help from "./components/DashboardPage/Help"
 import { useState, useEffect } from "react"
 
 function App() {
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [chats,setChat] = useState([])
   const [isDarkMode, setIsDarkMode] = useState(false);
+
   useEffect(() => {
     if (!isDarkMode) {
         document.body.classList.add('light-mode');
@@ -26,6 +28,7 @@ function App() {
         document.body.classList.remove('light-mode');
     };
     }, [isDarkMode]);
+    
   useEffect(() => {
       async function fetchData() {
         try {

@@ -5,7 +5,7 @@ import "../../styles/DashboardPage/dashboard.css"
 
 function Dashboard({username,chats,isDarkMode}) {
   return (
-    <Container fluid className="vh-100 all-dashboard-pages-container dashboard-container">
+    <Container fluid className="all-dashboard-pages-container dashboard-container">
       <Row className="h-100 overflow-hidden rounded-4">
 
           <Col xs={12} md={3} 

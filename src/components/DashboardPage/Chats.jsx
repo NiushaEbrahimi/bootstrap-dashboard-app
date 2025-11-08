@@ -7,7 +7,7 @@ function Chats({ chats }) {
   const navigate = useNavigate();
 
   return (
-    <Container fluid className="tickets-container mt-2" style={{ height: "50vh" }}>
+    <Container fluid className="tickets-container mt-2 overflow-hidden" style={{ height: "50vh" }}>
       <h2 className="h4 mb-2 text-center fw-bold">Tickets</h2>
       <div style={{minWidth:"100%"}}className="table-scroll rounded shadow-sm rounded-4">
         <table style={{minWidth:"100%"}}  className="table border-danger border-5 custom-table rounded-4 text-center">

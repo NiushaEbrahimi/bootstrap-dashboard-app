@@ -1,6 +1,6 @@
 import "../../styles/DashboardPage/chart.css"
 import { Container } from "react-bootstrap";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function MessageCounts({statusCount}){
     const [animatedHeights, setAnimatedHeights] = useState({});
@@ -13,7 +13,7 @@ function MessageCounts({statusCount}){
 
         const timer = setTimeout(() => {
             setAnimatedHeights(targetHeights);
-        }, 50); 
+        }, 100); 
 
         return () => clearTimeout(timer);
     }, [statusCount]); 
@@ -23,7 +23,8 @@ function MessageCounts({statusCount}){
     };
 
     const maxCount = Math.max(...Object.values(statusCount).map(data => data.count), 1);
-    const maxHeight = 30 * maxCount * 1.1;
+    // TODO: what is the calculation
+    const maxHeight = 50 * maxCount ;
 
     return(
         <Container 
@@ -34,7 +35,7 @@ function MessageCounts({statusCount}){
                 <div className="bar-chart">
                     {Object.keys(statusCount).map((key) => {
                         const data = statusCount[key];
-                        const height = getBarHeight(key, 0); 
+                        const height = getBarHeight(key, 5); 
 
                         return (
                             <div 

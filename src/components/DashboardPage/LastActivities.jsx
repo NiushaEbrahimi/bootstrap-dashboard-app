@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
-import jalaliday from 'jalaliday/dayjs'
 import { Container} from "react-bootstrap";
-
-dayjs.extend(jalaliday);
 
 function LastActivities() {
   
@@ -20,6 +17,7 @@ function LastActivities() {
       }
     };
     fetchData();
+    // there should be a dependency that when there is a new activity this will refetch
   }, []);
 
   const now = dayjs();
@@ -41,10 +39,9 @@ function LastActivities() {
 
   return (
     <div 
-    
       className="activity-chart-container
-      p-3 pt-1 ms-1 h-100 justify-content-center align-items-center
-      w-100 d-flex gap-2 flex-column"
+      p-2 pt-1 h-100 align-items-center
+      w-100 d-flex gap-2 flex-column overflow-y-auto overflow-x-hidden"
     >
       {recentActivities.slice().reverse().map((activity) => (
         <Container

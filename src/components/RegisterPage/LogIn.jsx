@@ -5,13 +5,16 @@ import { Form, Button, Card, Container } from "react-bootstrap";
 
 function LogIn({setUsername, setPassword, setEmail}) {
     const navigate = useNavigate();
+
     const [usernameInput, setUsernameInput] = useState("");
     const [passwordInput, setPasswordInput] = useState("");
     const [ disabledVar,setDisabledVar] = useState(true)
+
     useEffect(()=>{
         if(usernameInput ===""|| passwordInput ===""){setDisabledVar(true)}
         else{setDisabledVar(false)}
     },[usernameInput,passwordInput])
+
     const handleSubmit= ()=>{
         if (usernameInput && passwordInput){
             const users = getUsers();
@@ -30,6 +33,7 @@ function LogIn({setUsername, setPassword, setEmail}) {
             }
         }
     }
+    
     return(
     <Card className="p-0 p-md-1 w-100 h-100 d-flex flex-column justify-content-center align-items-center">
         <Card.Body className="p-2 pb-0 d-flex flex-column justify-content-center w-100">

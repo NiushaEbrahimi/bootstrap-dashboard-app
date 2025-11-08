@@ -10,7 +10,6 @@ function SideBar({isDarkMode}) {
         <Nav.Item>
           <NavLink
             to="/dashboard/dashboard"
-            end
             className={({ isActive }) =>
               `${baseClasses} 
                 ${isActive 

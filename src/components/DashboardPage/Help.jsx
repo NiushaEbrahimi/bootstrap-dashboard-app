@@ -17,7 +17,7 @@ function Help({isDarkMode}){
                     <div className="p-4 flex-grow-1 overflow-y-auto">
                         <h2 className="mb-4">Help & Support</h2>
                         
-                        <Accordion defaultActiveKey="0" alwaysOpen>
+                        <Accordion defaultActiveKey={["0"]}  alwaysOpen>
                             <Accordion.Item eventKey="0" className="accordion-item">
                                 <Accordion.Header><h3 className="m-0">How do I log in to my account?</h3></Accordion.Header>
                                 <Accordion.Body className="bg-light">
@@ -26,7 +26,7 @@ function Help({isDarkMode}){
                                 </Accordion.Body>
                             </Accordion.Item>
 
-                            <Accordion.Item eventKey="1" className="accordion-item">
+                            <Accordion.Item eventKey="1" className="accordion-item ">
                                 <Accordion.Header><h3 className="m-0">How do I reset my password?</h3></Accordion.Header>
                                 <Accordion.Body className="bg-light">
                                     Click “Forgot Password?” on the login page and follow the steps.

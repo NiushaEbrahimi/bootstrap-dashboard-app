@@ -22,15 +22,17 @@ function ChatMessages({messages,status,setStatus}){
                     return(
                         <div 
                             key={chat.id}
-                            className="d-flex flex-row justify-content-start p-2 mb-1 rounded bg-light"
+                            className="d-flex flex-row align-items-center justify-content-start p-2 pt-3 pb-3 mb-1 rounded bg-light"
                             style={{ direction: chat.sender === "user" ? "rtl" : "ltr" }}
                         >
                             <div>
                                 <img src={image}
-                                style={{width:"30px",height:"30px"}}
+                                style={{width:"30px",height:"30px",borderRadius:"50%"}}
                                 className="d-flex justify-content-center align-items-center ms-1 me-1"/>
                             </div>
-                            <p className="fs-6 mt-2" style={{direction:"rtl"}}>{chat.text}</p>
+                            <div className="d-flex align-items-center">
+                                <p className="fs-6 m-0" style={{direction:"rtl"}}>{chat.text}</p>
+                            </div>
                         </div>
                     )
                 })}
@@ -45,14 +47,15 @@ function ChatMessages({messages,status,setStatus}){
                         "timestamp":dayjs().calendar("jalali").format("YYYY/MM/DD - HH:mm")}
                     ])
                     setInputValue("")
-                    setStatus("در انتظار پاسخ")
+                    setStatus("در حال انجام")
                 }}
             >
                 <input
-                    disabled={status==="در انتظار پاسخ" ||  status==="ایجاد شده" ? true : false}
-                    className="rounded-4 p-1 w-100" 
+                    disabled={status!=="در انتظار پاسخ"}
+                    className="rounded-4 p-2 fs-6 w-100" 
+                    style={{direction:"rtl"}}
                     type="text" 
-                    placeholder="Message ..."
+                    placeholder=" پیام خود را بنویسید ..."
                     value={inputValue}
                     onChange={(text)=>{
                         setInputValue(text.target.value)
@@ -63,7 +66,7 @@ function ChatMessages({messages,status,setStatus}){
                     className="form-message-button ps-4 pe-4 pt-2 pb-2 rounded-4 fs-5 ms-1"
                     style={{backgroundColor:"var(--color-6)",cursor:"pointer"}} 
                     type="submit"
-                    disabled={status==="در انتظار پاسخ" ||  status==="ایجاد شده" ? true : false}
+                    disabled={status!=="در انتظار پاسخ"}
                 >send</button>
             </form>
         </>

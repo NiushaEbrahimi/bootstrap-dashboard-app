@@ -5,7 +5,7 @@
     "title": "مشکل در ورود به سیستم",
     "section": "فنی",
     "group": "پشتیبانی کاربران",
-    "status": "در حال انجام",
+    "status": "در انتظار پاسخ",
     "status_css_class": "user-support",
     "messages": [
       {
@@ -28,7 +28,7 @@
     "title": "فاکتور پرداخت ثبت نمی‌شود",
     "section": "مالی",
     "group": "حسابداری",
-    "status": "در حال انجام",
+    "status": "در انتظار پاسخ",
     "status_css_class": "accounting",
     "messages": [
       {
@@ -108,7 +108,7 @@
     "title": "درخواست افزایش سقف اعتبار",
     "section": "مالی",
     "group": "حسابداری",
-    "status": "در انتظار پاسخ",
+    "status": "در حال انجام",
     "status_css_class": "accounting",
     "messages": [
       {
@@ -154,7 +154,7 @@
     "title": "خطا در ارسال ایمیل تأییدیه",
     "section": "فنی",
     "group": "پشتیبانی کاربران",
-    "status": "در حال انجام",
+    "status": "در انتظار پاسخ",
     "status_css_class": "user-support",
     "messages": [
       {

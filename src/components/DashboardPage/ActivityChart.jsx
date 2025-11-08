@@ -3,13 +3,14 @@ import LastActivities from "./LastActivities"
 import MessageCounts from "./MessageCounts"
 
 function ActivityChart({statusCount}) { 
+  // TODO: this is not responsive
   return (
-    <Container fluid className="p-2 h-100 overflow-hidden">
-      <Row className="g-3 h-100 m-0">
-        <Col className="m-0 p-0 h-100">
+    <Container fluid className="p-2 h-100 overflow-hidden d-flex flex-column">
+      <Row  className="h-100 m-0 ">
+        <Col md={8} lg={8} className="m-0 p-0 h-100 ">
           <MessageCounts statusCount={statusCount}/>        
         </Col>
-        <Col className="m-0 p-0 h-100 w-100">
+        <Col md={4} lg={4} className="m-0 p-0 h-100 overflow-hidden">
           <LastActivities/>
         </Col>
       </Row>

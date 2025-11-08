@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'vazirmatn';
+    src: url("../assets/fonts/Vazirmatn/static/Vazirmatn-Regular.ttf");
+}
 :root {
     --color-1: #bfc3ba; 
     --color-2: #a9aca9; 
@@ -44,9 +48,10 @@ body{
     overflow-x: hidden;
     display: block !important;
     background-color: #f0f0f0;
-    font-family: 'Dongle','vazirmatn';
+    font-family: 'vazirmatn';
     font-size: 1.5rem;
     color: var(--text-color) !important;
+    overflow: hidden;
 }
 input:default, input:hover, input:active, input, button{
     font: inherit;

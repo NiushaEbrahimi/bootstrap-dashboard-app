@@ -26,6 +26,7 @@
     right: 0;
 }
 .red-colored-square{
+    z-index: 100;
     width: 8px;
     height: 8px;
     background-color: var(--color-9);
@@ -38,7 +39,7 @@
     height: 100%;
     position: absolute;
     top:50%;
-    left: 30%;
+    left: 40%;
     transform: translate(-50%, -50%);
 }
 .unread{
@@ -65,7 +66,6 @@
     text-decoration-thickness: 2px;
 }
 .circle{ 
-    content: "";
     background:conic-gradient(var(--color-9) 0deg,var(--color-9) var(--rotation-angle),var(--color-white) var(--rotation-angle), var(--color-white) var(--rotation-angle-1));;
     border-radius: 50%;
     width: 80px;
@@ -73,11 +73,11 @@
     position: absolute;
     top:50%;
     left: 50%;
+    animation: angle-loop 2000ms forwards;
     transform: translate(-50%, -50%);
 }
 .circle-1{
     background-color: var(--color-4);
-    content: "";
     border-radius: 50%;
     width: 70px;
     height: 70px;
@@ -85,7 +85,6 @@
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 @property --rotation-angle {
@@ -96,17 +95,18 @@
 @property --rotation-angle-1 {
   syntax: "<angle>";
   inherits: false;
-  initial-value: 90deg;
+  initial-value: var(--rotation-angle-react);
 }
+
+
 
 @keyframes angle-loop {
     0%{
         --rotation-angle:0deg;
-        --rotation-angle-1:90deg;
-        
+        --rotation-angle-1:var(--rotation-angle-react);
     }
     100%{
-        --rotation-angle:90deg;
-        --rotation-angle-1:270deg;
+        --rotation-angle:var(--rotation-angle-react);
+        --rotation-angle-1:360deg;
     }
 }
