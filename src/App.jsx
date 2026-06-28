@@ -1,3 +1,4 @@
+import  "./styles/general.css"
 import { Container, Row, Col } from "react-bootstrap";
 import { Navigate, BrowserRouter, Route, Routes } from "react-router-dom"
 import LogIn from './components/RegisterPage/LogIn'

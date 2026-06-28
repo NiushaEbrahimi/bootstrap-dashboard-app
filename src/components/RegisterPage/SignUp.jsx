@@ -85,7 +85,7 @@ function SignUp({ setUsername, setPassword, setEmail }) {
     };
 
     return (
-        <Card className="p-0 p-md-1 w-100 h-100 d-flex flex-column justify-content-center ">
+        <Card className="p-0 p-md-3 w-100 h-100 d-flex flex-column justify-content-center ">
             <Card.Body className="p-2 pb-0 h-100 d-flex flex-column justify-content-center align-items-center align-items-md-start">
                 <h3 className=" mb-0 mb-md-2 text-center h1">SignUp</h3>
                 <Form 
