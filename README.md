@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="./src/assets/gif2.gif" alt="Project Demo" width="900">
+  <img src="./src/assets/bootstrap-dashboad.gif" alt="Project Demo" width="900">
 </p>
 
 
