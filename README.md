@@ -1,51 +1,73 @@
 # Bootstrap Dashboard App
+<p align="center">
+  <img src="https://img.shields.io/badge/status-in%20progress-lightgrey" alt="Status">
+  <img src="https://img.shields.io/badge/project-not%20complete-orange" alt="Status">
+</p>
 
-## 📝 Description
+<p align="center">
+  <img src="./src/assets/gif2.gif" alt="Project Demo" width="900">
+</p>
 
-This is a React application built with **Vite** and styled using **Bootstrap 5**.
 
-## 🚀 Technologies
+A React dashboard application originally developed as part of a frontend developer interview assignment. The project focuses on building a responsive admin-style dashboard interface using modern React development practices and reusable UI components.
 
-* **Framework:** React
-* **Build Tool:** Vite
-* **Styling:** Bootstrap 5
-* **Date/Time Management:** Day.js
-* **Package Manager:** npm
+## Demo
 
-## ⚙️ Installation and Setup
+Live demo:
+[👁️ bootstrap-dashboard-app-vercel-demo.vercel.app](https://bootstrap-dashboard-app-vercel-demo.vercel.app/)
 
-Follow these steps to get the project running on your local machine.
+---
 
-### Prerequisites
+## About
 
-You need to have **Node.js** (version 18+) installed on your system.
+This project was created approximately eight months ago as a take-home task for a frontend developer interview.
 
-### Steps
+The goal was to build a dashboard-style application with a clean user interface, responsive layout, and reusable components while working within a limited timeframe. It served as an opportunity to practice React fundamentals, component architecture, state management, routing, and working with UI libraries.
 
-1.  **Clone the Repository:**
+Although the project is not fully complete, it represents my approach to frontend development at the time and documents an important step in my learning journey.
 
-    ```bash
-    git clone https://github.com/NiushaEbrahimi/bootstrap-dashboard-app.git
-    cd bootstrap-dashboard-app
-    ```
+---
 
-2.  **Install Dependencies:**
+## Tech Stack
 
-    Run the installation command based on your package manager:
+* React
+* React Bootstrap
+* Vite
 
-    ```bash
-    npm install
-    ```
+---
 
-3.  **Run the Development Server:**
+## Requirements
 
-    Start the application in development mode with Hot Module Replacement (HMR):
+Before running the project locally, make sure you have:
 
-    ```bash
-    npm run dev
-    ```
+* Node.js 18+
+* npm or yarn
 
-    The application will be available at the address shown in your terminal (usually `http://localhost:5173/`).
+---
 
-## 🚀 Demo
-[👁️ View the Project](https://bootstrap-dashboard-app-vercel.vercel.app)
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/NiushaEbrahimi/bootstrap-dashboard-app.git
+cd bootstrap-dashboard-app
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## License
+
+This project is intended for learning and experimentation.
