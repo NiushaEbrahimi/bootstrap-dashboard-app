@@ -7,13 +7,15 @@ import Dashboard from './components/DashboardPage/Dashboard'
 import ChatDetail from './components/ChatsPAges/ChatDetail'
 import Profile from "./components/DashboardPage/Profile"
 import Help from "./components/DashboardPage/Help"
+import { getCurrentUser } from './utils/authentication'
 import { useState, useEffect } from "react"
 
 function App() {
+  const currentUser = getCurrentUser();
 
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState(currentUser?.username || "");
+  const [password, setPassword] = useState(currentUser?.password || "");
+  const [email, setEmail] = useState(currentUser?.email || "");
   const [chats,setChat] = useState([])
   const [isDarkMode, setIsDarkMode] = useState(false);
 

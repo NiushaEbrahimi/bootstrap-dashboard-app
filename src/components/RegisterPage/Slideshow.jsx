@@ -15,28 +15,39 @@ function Slideshow() {
   ];
 
   const [count, setCount] = useState(0);
-  const [style, setStyle] = useState("translateX(0%)");
-  const [opacity, setOpacity] = useState("1");
+  const [cardStyle, setCardStyle] = useState({
+    transform: "translateX(0%)",
+    opacity: 1,
+    transition: "transform 500ms ease, opacity 500ms ease",
+  });
   const slideLength = dataSlides.length;
 
   const transitionSlide = useCallback((newCount, direction = 'next') => {
-
-    setOpacity("0");
     const outDirection = direction === 'next' ? '-100%' : '100%';
-    setStyle(`translateX(${outDirection})`);
-    
-    setTimeout(() => {
-      
-      setCount(newCount); 
-      const inDirection = direction === 'next' ? '100%' : '-100%';
-      setStyle(`translateX(${inDirection})`); 
-      
-    }, 500); 
+    const inDirection = direction === 'next' ? '100%' : '-100%';
+
+    setCardStyle({
+      transform: `translateX(${outDirection})`,
+      opacity: 0,
+      transition: "transform 500ms ease, opacity 500ms ease",
+    });
 
     setTimeout(() => {
-      setOpacity("1");
-      setStyle("translateX(0%)");
-    }, 550);
+      setCount(newCount);
+      setCardStyle({
+        transform: `translateX(${inDirection})`,
+        opacity: 0,
+        transition: "none",
+      });
+    }, 500);
+
+    setTimeout(() => {
+      setCardStyle({
+        transform: "translateX(0%)",
+        opacity: 1,
+        transition: "transform 500ms ease, opacity 500ms ease",
+      });
+    }, 520);
   }, []);
 
   const goToNext = useCallback(() => {
@@ -73,11 +84,7 @@ function Slideshow() {
 
       <Card
         className="border-0"
-        style={{
-          transform: style,
-          opacity: opacity,
-          transition: "transform 500ms, opacity 500ms",
-        }}
+        style={cardStyle}
       >
         <Card.Body>
           <Row>

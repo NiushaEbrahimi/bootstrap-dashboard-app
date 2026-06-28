@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { addUser, getUsers } from "../../utils/authentication";
+import { addUser, getUsers, saveCurrentUser } from "../../utils/authentication";
 import { useNavigate } from "react-router-dom";
 import {Form, Button, Card, Container} from 'react-bootstrap'
 
@@ -68,11 +68,16 @@ function SignUp({ setUsername, setPassword, setEmail }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (formState.ready) {
-            addUser({
+            const newUser = {
                 username: formState.username,
                 email: formState.email,
                 password: formState.password,
-            });
+            };
+            addUser(newUser);
+            saveCurrentUser(newUser);
+            setUsername(newUser.username);
+            setPassword(newUser.password);
+            setEmail(newUser.email);
             navigate("/dashboard/dashboard");
         } else {
             alert("Please complete the form correctly");
@@ -81,21 +86,24 @@ function SignUp({ setUsername, setPassword, setEmail }) {
 
     return (
         <Card className="p-0 p-md-1 w-100 h-100 d-flex flex-column justify-content-center ">
-            <Card.Body className="p-2 pb-0 h-100 d-flex flex-column justify-content-center">
+            <Card.Body className="p-2 pb-0 h-100 d-flex flex-column justify-content-center align-items-center align-items-md-start">
                 <h3 className=" mb-0 mb-md-2 text-center h1">SignUp</h3>
                 <Form 
+                    className="w-100"
                     onSubmit={(e)=>{
                         e.preventDefault();
                         handleSubmit(e);
                 }}>
-                    <Form.Group className="input-container">
-                        <Form.Floating className="p-1">
+                    <Form.Group className="mb-3 w-100">
+                        <Form.Floating className="p-1 w-100">
                             <Form.Control
                                 type="email"
                                 id="email"
                                 placeholder="Enter your email"
                                 value={formState.email}
                                 onChange={(e) => handleChange("email", e.target.value)}
+                                style={{fontSize:"1.5rem",border:"1px solid rgba(0,0,0,0.4)"}}
+                                className="w-100"
                             />
                             <Form.Label htmlFor="email">Email:</Form.Label>
                         </Form.Floating>
@@ -106,14 +114,16 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                         <p className="fs-5">❌ This is not an email.</p>
                         )}
                     </Form.Group>
-                    <Form.Group className="input-container">
-                        <Form.Floating className="p-1">
+                    <Form.Group className="mb-3 w-100">
+                        <Form.Floating className="p-1 w-100">
                             <Form.Control
                                 type="text"
                                 id="username"
                                 placeholder="Enter your username"
                                 value={formState.username}
                                 onChange={(e) => handleChange("username", e.target.value)}
+                                style={{fontSize:"1.5rem",border:"1px solid rgba(0,0,0,0.4)"}}
+                                className="w-100"
                             />
                             <Form.Label htmlFor="username">Username:</Form.Label>
                         </Form.Floating>
@@ -121,8 +131,8 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                             <p className="fs-5">❌ This username is already taken.</p>
                             )}
                     </Form.Group>
-                    <Form.Group className="input-container">
-                        <Form.Floating className="p-1">
+                    <Form.Group className="mb-3 w-100">
+                        <Form.Floating className="p-1 w-100">
                             <Form.Control
                                 type="password"
                                 id="password"
@@ -134,6 +144,8 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                                     }
                                     handleChange("password", e.target.value)
                                 }}
+                                style={{fontSize:"1.5rem",border:"1px solid rgba(0,0,0,0.4)"}}
+                                className="w-100"
                             />
                             <Form.Label htmlFor="password">Password:</Form.Label>
                             {passwordChecking ? <div className="fs-5">
@@ -153,14 +165,16 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                             : null}
                         </Form.Floating>
                     </Form.Group>
-                    <Container className={"d-flex justify-content-center"}>
-                    <Button 
-                        type="submit" 
-                        disabled={!formState.ready}
-                        className="cursor-pointer mt-0 mt-md-2 mb-2 ps-3 pe-3 pt-1 pb-1 fs-4"
-                    >
-                        sign up
-                    </Button>
+                    <Container className="d-flex justify-content-center justify-content-md-start w-100">
+                    <div>
+                        <Button 
+                            type="submit" 
+                            disabled={!formState.ready}
+                            className="cursor-pointer mt-0 mt-md-2 mb-2 ps-3 pe-3 pt-1 pb-1 fs-4 w-100 w-md-auto"
+                        >
+                            sign up
+                        </Button>
+                    </div>
                     </Container>
                 </Form>
                 <small className="text-center">Already have an account?{" "}
@@ -171,7 +185,7 @@ function SignUp({ setUsername, setPassword, setEmail }) {
                         className="text-primary fw-semibold m-2"
                         style={{cursor:"pointer"}}
                         >
-                        Sign up
+                        Log in
                     </span>
                 </small>
             </Card.Body>

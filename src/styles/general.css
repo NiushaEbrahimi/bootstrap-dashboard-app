@@ -57,6 +57,37 @@ input:default, input:hover, input:active, input, button{
     font: inherit;
     border: none;
 }
+
+input, textarea, select, .form-control {
+    font: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: inherit;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    transition: border-color 200ms ease, box-shadow 200ms ease, color 200ms ease;
+}
+
+input:hover, textarea:hover, select:hover, .form-control:hover {
+    border-color: rgba(0, 0, 0, 0.35);
+}
+
+input:focus, textarea:focus, select:focus, .form-control:focus {
+    outline: none;
+    border-color: var(--color-9);
+    box-shadow: 0 0 0 0.2rem rgba(119, 151, 119, 0.2);
+}
+
+.form-floating .form-control {
+    padding: 1.5rem 1rem 0.75rem;
+}
+
+button, .btn {
+    font-size: 1rem;
+}
+
 h1, h2, h3, h4, h5, h6, p{
     margin: 0;
     font-weight: normal;
